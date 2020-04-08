@@ -6,3 +6,6 @@ Projektet/CPU/iseconfig/main.xreport
 Projektet/CPU/main_summary.html
 Projektet/CPU/iseconfig/CPU.projectmgr
 *.projectmgr
+*.html
+*.xreport
+*.projectmgr
