@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 Hej Kaj du er sej
+=======
+Hej Kaj
+JEg ville også prøve /Bjarke
+>>>>>>> 619483013dd6b22a597a1158596408e95572d653
