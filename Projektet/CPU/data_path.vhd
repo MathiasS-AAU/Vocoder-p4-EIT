@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    15:04:05 04/08/2020 
+-- Create Date:    14:01:41 04/15/2020 
 -- Design Name: 
--- Module Name:    main - Behavioral 
+-- Module Name:    data_path - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,13 +29,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity main is
-end main;
+entity data_path is
+end data_path;
 
-architecture Behavioral of main is
+architecture Behavioral of data_path is
 
 begin
---hej
+
+	ALU : alu 	port map(B_out, BUS1, ALU_Sel, NZVC_sig, Result_sig); 
+
 
 end Behavioral;
 
