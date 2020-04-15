@@ -1,0 +1,8 @@
+vhdl work "ALU.vhd"
+vhdl work "rom_32733x16_sync.vhd"
+vhdl work "ram_32767x16_sync.vhd"
+vhdl work "data_path.vhd"
+vhdl work "control_unit.vhd"
+vhdl work "memory.vhd"
+vhdl work "cpu.vhd"
+vhdl work "computer.vhd"
