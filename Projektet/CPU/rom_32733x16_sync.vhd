@@ -8,6 +8,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.numeric_std.all;
 
 entity rom_32767x16_sync is
 	port(CLK	 	  : in std_logic; 							-- Clock signal

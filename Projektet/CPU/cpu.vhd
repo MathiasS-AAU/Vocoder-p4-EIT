@@ -9,7 +9,8 @@
 --							datapath, that will take theese as inputs (for most cases)
 ----------------------------------------------------------------------------------
 library IEEE;
-use IEEE.std_logic_1164.all;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.numeric_std.all;
 
 entity cpu is -- Portdefinition of CPU (Module)

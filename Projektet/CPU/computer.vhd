@@ -8,7 +8,8 @@
 --							portmapping modules
 ----------------------------------------------------------------------------------
 library IEEE;
-use IEEE.std_logic_1164.all;  
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.numeric_std.all;
 
 entity computer is -- Portdefinition of computer (Overmodule)

@@ -10,6 +10,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.numeric_std.all;
 
 entity memory is -- Portdefinition of memoryblock (Module)
 	port (CLK			: in  std_logic; -- Clock signal
