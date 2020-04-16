@@ -5,13 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="40" delta="new" >"C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 21: <arg fmt="%s" index="1">alu</arg> is not a <arg fmt="%s" index="2">component</arg>
+<msg type="warning" file="HDLCompiler" num="439" delta="old" >"C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 59: Formal port <arg fmt="%s" index="1">res</arg> of mode <arg fmt="%s" index="2">out</arg> cannot be associated with actual port <arg fmt="%s" index="3">alu_sel</arg> of mode <arg fmt="%s" index="4">in</arg>
 </msg>
 
-<msg type="error" file="HDLCompiler" num="27" delta="new" >"C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 21: <arg fmt="%s" index="1">alu</arg> has only <arg fmt="%d" index="2">0</arg> ports
+<msg type="error" file="HDLCompiler" num="100" delta="old" >"C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 59: <arg fmt="%s" index="1">alu_sel</arg> with mode &apos;in&apos; cannot be updated
 </msg>
 
-<msg type="error" file="HDLCompiler" num="854" delta="new" >"C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 16: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="854" delta="old" >"C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 35: Unit &lt;<arg fmt="%s" index="1">data_path_arch</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>

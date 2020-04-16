@@ -9,10 +9,11 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;  
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.numeric_std.all;
 
 entity alu is
-	port	(B		: in  std_logic_vector (15 downto 0);
+	port (B		: in  std_logic_vector (15 downto 0);
 		 A		: in  std_logic_vector (15 downto 0);
 		 ALU_Sel	: in  std_logic_vector (3 downto 0);
 		 NZVC		: out std_logic_vector (3 downto 0);
@@ -31,7 +32,9 @@ begin
 		
 		begin
 		
-	------------Sum Calculation----------------------------------
+----------------------------------------------------------------------------------
+-- Sum calculation
+----------------------------------------------------------------------------------
 		if(ALU_Sel = "0000") then
 			Sum_uns := unsigned('0' & A) + unsigned('0' & B);
 			Result  <= std_logic_vector(Sum_uns(16 downto 0));
@@ -53,30 +56,30 @@ begin
 			
 			NZVC(0) <= Sum_uns(16);
 		elsif(ALU_Sel = "0000") then -- ADD_AB
-			Result <= A+B;
+			Result <= A + B;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "0001") then --SUB_AB
-			Result <= A-B;
+		elsif(ALU_Sel = "0001") then -- SUB_AB
+			Result <= A - B;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "0010") then --SUB_BA
-			Result <= B-A;
+		elsif(ALU_Sel = "0010") then -- SUB_BA
+			Result <= B - A;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "0011") then --MUL_AB
+		elsif(ALU_Sel = "0011") then -- MUL_AB
 			Result <= std_logic_vector(to_unsigned((to_integer(unsigned(A)) * to_integer(unsigned(B))),16)) ;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "0100") then --DIV_AB
+		elsif(ALU_Sel = "0100") then -- DIV_AB
 			Result <= std_logic_vector(to_unsigned((to_integer(unsigned(A)) / to_integer(unsigned(B))),16)) ;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "0101") then --DIV_BA
+		elsif(ALU_Sel = "0101") then -- DIV_BA
 			Result <= std_logic_vector(to_unsigned((to_integer(unsigned(B)) / to_integer(unsigned(A))),16)) ;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "0110") then --AND_AB
+		elsif(ALU_Sel = "0110") then -- AND_AB
 			Result <= A AND B;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "0111") then --OR_AB
+		elsif(ALU_Sel = "0111") then -- OR_AB
 			Result <= A OR B;
 			NZVC <= x"0";
-		elsif(ALU_Sel = "1000") then --NOT_A
+		elsif(ALU_Sel = "1000") then -- NOT_A
 			Result <= NOT A;
 			NZVC <= x"0";
 		end if;
@@ -84,5 +87,3 @@ begin
 	end process;
 
 end architecture;
-
-

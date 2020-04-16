@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: computer.prj
 
@@ -106,8 +106,8 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Parsing                                  *
 =========================================================================
 Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd" into library work
-Parsing entity <ALU>.
-Parsing architecture <Behavioral> of entity <alu>.
+Parsing entity <alu>.
+Parsing architecture <alu_arch> of entity <alu>.
 Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd" into library work
 Parsing entity <rom_32733x16_sync>.
 Parsing architecture <Behavioral> of entity <rom_32733x16_sync>.
@@ -116,17 +116,16 @@ Parsing entity <ram_32767x16_sync>.
 Parsing architecture <Behavioral> of entity <ram_32767x16_sync>.
 Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" into library work
 Parsing entity <data_path>.
-Parsing architecture <Behavioral> of entity <data_path>.
-ERROR:HDLCompiler:40 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 21: alu is not a component
-ERROR:HDLCompiler:27 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 21: alu has only 0 ports
-INFO:HDLCompiler:1408 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 21. alu is declared here
-ERROR:HDLCompiler:854 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 16: Unit <behavioral> ignored due to previous errors.
+Parsing architecture <data_path_arch> of entity <data_path>.
+WARNING:HDLCompiler:439 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 59: Formal port res of mode out cannot be associated with actual port alu_sel of mode in
+ERROR:HDLCompiler:100 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 59: alu_sel with mode 'in' cannot be updated
+ERROR:HDLCompiler:854 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" Line 35: Unit <data_path_arch> ignored due to previous errors.
 VHDL file C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd ignored due to errors
 --> 
 
-Total memory usage is 4457908 kilobytes
+Total memory usage is 4474100 kilobytes
 
-Number of errors   :    3 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
