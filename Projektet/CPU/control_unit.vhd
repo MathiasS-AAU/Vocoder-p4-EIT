@@ -264,22 +264,31 @@ begin
 			next_state <= S_FETCH_0;
 			
 	-- DATA MANIP
+		-- ADD_AD
 		elsif (current_state = S_ADD_AB_4) then
 			next_state <= S_FETCH_0;
+		-- SUB_AB
 		elsif (current_state = S_SUB_AB_4) then
 			next_state <= S_FETCH_0;
+		-- SUB_BA
 		elsif (current_state = S_SUB_BA_4) then
 			next_state <= S_FETCH_0;
+		-- MUL_AB
 		elsif (current_state = S_MUL_AB_4) then
 			next_state <= S_FETCH_0;
+		-- DIV_AB
 		elsif (current_state = S_DIV_AB_4) then
 			next_state <= S_FETCH_0;
+		-- DIV_BA
 		elsif (current_state = S_DIV_BA_4) then
 			next_state <= S_FETCH_0;
+		-- AND_AB
 		elsif (current_state = S_AND_AB_4) then
 			next_state <= S_FETCH_0;
+		-- OR_AB
 		elsif (current_state = S_OR_AB_4) then
 			next_state <= S_FETCH_0;
+		-- NOT_A
 		elsif (current_state = S_NOT_A_4) then
 			next_state <= S_FETCH_0;				
 
@@ -382,21 +391,21 @@ begin
 		case (current_state) is
 			when S_FETCH_0 =>
 				IR_Load 	<= '0';
-				MAR_Load <= '1';
+				MAR_Load <= '1'; -- Overwrite MAR
 				PC_Load 	<= '0';
 				PC_INC 	<= '0';
 				A_Load 	<= '0';
 				B_Load 	<= '0';
 				ALU_Sel 	<= "0000";
 				CCR_Load <= '0';
-				BUS1_Sel <= "00";
-				BUS2_Sel <= "01";
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
 				WE 		<= '0';
 			when S_FETCH_1 =>
 				IR_Load 	<= '0';
 				MAR_Load <= '0';
 				PC_Load 	<= '0';
-				PC_INC 	<= '1';
+				PC_INC 	<= '1'; -- Increment PC
 				A_Load 	<= '0';
 				B_Load 	<= '0';
 				ALU_Sel 	<= "0000";
@@ -405,7 +414,7 @@ begin
 				BUS2_Sel <= "00";
 				WE 		<= '0';
 			when S_FETCH_2 =>
-				IR_Load 	<= '1';
+				IR_Load 	<= '1'; -- Overwrite IR
 				MAR_Load <= '0';
 				PC_Load 	<= '0';
 				PC_INC 	<= '0';
@@ -414,7 +423,7 @@ begin
 				ALU_Sel 	<= "0000";
 				CCR_Load <= '0';
 				BUS1_Sel <= "00";
-				BUS2_Sel <= "10";
+				BUS2_Sel <= "10"; -- From memory
 				WE 		<= '0';
 			when S_DECODE_3 =>
 				IR_Load 	<= '0';
@@ -428,6 +437,452 @@ begin
 				BUS1_Sel <= "00";
 				BUS2_Sel <= "00";
 				WE 		<= '0';
+	
+		-- LOAD AND STORE
+			-- LDA_IMM
+
+
+			-- LDA_DIR
+
+
+			-- LDB_IMM
+
+
+			-- LDB_DIR
+
+
+			-- STA_DIR
+			when S_STA_DIR_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_STA_DIR_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_STA_DIR_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_STA_DIR_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00";
+				WE       <= '1'; -- Write enable
+
+			-- STB_DIR
+			when S_STB_DIR_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_STB_DIR_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_STB_DIR_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_STB_DIR_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "10"; -- B
+				BUS2_Sel <= "00";
+				WE       <= '1'; -- Write enable
+
+		-- DATA MANIP.
+			-- ADD_AB
+
+
+			-- SUB_AB
+
+
+			-- SUB_BA
+
+
+			-- MUL_AB
+
+
+			-- DIV_AB
+			when S_DIV_AB_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Overwrite A
+				B_Load 	<= '0';
+				ALU_Sel  <= "0100"; -- ALU operation Div_AB
+				CCR_Load <= '1'; -- Overwrite CCR
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00"; -- ALU
+				WE       <= '0';
+
+			-- DIV_BA
+			when S_DIV_BA_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Overwrite A
+				B_Load 	<= '0';
+				ALU_Sel  <= "0101"; -- ALU operation Div_BA
+				CCR_Load <= '1'; -- Overwrite CCR
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00"; -- ALU
+				WE       <= '0';
+
+			-- AND_AB
+			when S_AND_AB_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Overwrite A
+				B_Load 	<= '0';
+				ALU_Sel  <= "0110"; -- ALU operation AND
+				CCR_Load <= '1'; -- Overwrite CCR
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00"; -- ALU
+				WE       <= '0';
+
+			-- OR_AB
+			when S_OR_AB_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Overwrite A
+				B_Load 	<= '0';
+				ALU_Sel  <= "0111"; -- ALU operation OR
+				CCR_Load <= '1'; -- Overwrite CCR
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00"; -- ALU
+				WE       <= '0';
+
+			-- NOT_A
+			when S_NOT_A_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Overwrite A
+				B_Load 	<= '0';
+				ALU_Sel  <= "1000"; -- ALU operation NOT
+				CCR_Load <= '1'; -- Overwrite CCR
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00"; -- ALU
+				WE       <= '0';
+
+		-- BRANCHES/JUMP
+			-- BRA
+			when S_BRA_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_BRA_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_BRA_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '1'; -- Overwrite PC		
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+
+			-- BNT
+			when S_BNT_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC   <= '0';
+				A_Load   <= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_BNT_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_BNT_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '1'; -- Overwrite PC
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_BNT_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+
+			-- BNF
+			when S_BNF_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_BNF_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_BNF_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '1'; -- Overwrite PC
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_BNF_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+
+			-- BZT
+			when S_BZT_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_BZT_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_BZT_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '1'; -- Overwrite PC
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_BZT_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+
+			-- BZF
+			when S_BZF_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_BZF_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_BZF_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '1'; -- Overwrite PC
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_BZF_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+
+			-- BVT
+
+
+			-- BVF
+
+
+			-- BCT
+
+
+			-- BCF
 			end case;
 	end process;
 end architecture;
