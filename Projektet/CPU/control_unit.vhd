@@ -440,15 +440,205 @@ begin
 	
 		-- LOAD AND STORE
 			-- LDA_IMM
-
-
+			when S_LDA_IMM_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- MAR LOAD
+				PC_Load  <= '0';
+				PC_INC     <= '0';
+				A_Load     <= '0';
+				B_Load     <= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_LDA_IMM_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC     <= '1'; -- Increment PC
+				A_Load     <= '0';
+				B_Load     <= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_LDA_IMM_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0'; 
+				PC_Load  <= '0';
+				PC_INC     <= '0';
+				A_Load     <= '1'; -- Load A
+				B_Load     <= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+				
 			-- LDA_DIR
+			when S_LDA_DIR_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; -- Bus 1
+				WE       <= '0';
+			when S_LDA_DIR_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_LDA_DIR_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_LDA_DIR_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+         when S_LDA_DIR_8 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1';  -- Load A
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; 
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0'; 
 
-
+				
 			-- LDB_IMM
-
+			when S_LDB_IMM_4 =>
+				IR_Load <= '0';
+				MAR_Load <= '1'; -- Overwrite MAR
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "01"; -- Bus 1 is on Bus 2
+				WE <= '0';
+			when S_LDB_IMM_5 =>
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '0';
+				PC_INC 	<= '1'; -- Increment program counter
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+				WE <= '0';
+			when S_LDB_IMM_6 =>
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '1'; -- Loads Bus 2 into register B
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "10"; -- From_memory is on Bus 2
+				WE <= '0';
 
 			-- LDB_DIR
+			when S_LDB_DIR_4 =>
+				IR_Load <= '0';
+				MAR_Load <= '1';  -- Overwrite MAR
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "01"; -- Bus 1 is on Bus 2
+				WE <= '0';
+			when S_LDB_DIR_5 =>
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '0';
+				PC_INC 	<= '1'; -- Increment program counter
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+				WE <= '0';
+			when S_LDB_DIR_6 =>
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '1'; -- Overwrites MAR
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "10"; -- From_memory is on Bus 2
+				WE <= '0';
+			when S_LDB_DIR_7 => -- Do nothing state - Waits for memory to be available from memory
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+				WE <= '0';
+			when S_LDB_DIR_8 =>
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '1';  -- Loads Bus 2 into register B
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "10"; -- From_memory is on Bus 2
+				WE <= '0';
 
 
 			-- STA_DIR
@@ -553,15 +743,62 @@ begin
 
 		-- DATA MANIP.
 			-- ADD_AB
+			when S_ADD_AB_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Overwrite A
+				B_Load 	<= '0';
+				ALU_Sel  <= "1001"; -- ALU operation SUB_AB
+				CCR_Load <= '1'; -- Overwrite CCR
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00"; -- ALU
+				WE       <= '0';
 
 
 			-- SUB_AB
-
-
+          when S_SUB_AB_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Overwrite A
+				B_Load 	<= '0';
+				ALU_Sel  <= "1000"; -- ALU operation ADD_AB
+				CCR_Load <= '1'; -- Overwrite CCR
+				BUS1_Sel <= "01"; -- A
+				BUS2_Sel <= "00"; -- ALU
+				WE       <= '0';
+				
+				
 			-- SUB_BA
-
-
+			when S_SUB_BA_4 =>
+				IR_Load <= '0';
+				MAR_Load <= '0';
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Result loaded into A
+				B_Load 	<= '0';
+				ALU_Sel <= "0010"; -- Substract B with A
+				CCR_Load <= '1'; -- CCR loaded with NZVC
+				BUS1_Sel <= "01"; -- Reg A is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+				WE <= '0';
+				
 			-- MUL_AB
+			when S_MUL_AB_4 =>
+				IR_Load <= '0';
+				MAR_Load <= '0';
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '1'; -- Result loaded into A
+				B_Load 	<= '0';
+				ALU_Sel <= "0011"; -- Multiply A and B
+				CCR_Load <= '1'; -- CCR loaded with NZVC
+				BUS1_Sel <= "01"; -- Reg A is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+				WE <= '0';
 
 
 			-- DIV_AB
@@ -873,17 +1110,206 @@ begin
 				BUS2_Sel <= "00";
 				WE       <= '0';
 
+
 			-- BVT
+			when S_BVT_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; --Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC   <= '0';
+				A_Load   <= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; --Bus 1
+				WE       <= '0';
+			when S_BVT_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_BVT_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '1'; -- Overwrite PC
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_BVT_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
 
 
 			-- BVF
+         when S_BVF_4 =>
+				IR_Load  <= '0';
+				MAR_Load <= '1'; --Overwrite MAR
+				PC_Load  <= '0';
+				PC_INC   <= '0';
+				A_Load   <= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- PC
+				BUS2_Sel <= "01"; --Bus 1
+				WE       <= '0';
+			when S_BVF_5 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
+			when S_BVF_6 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '1'; -- Overwrite PC
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "10"; -- From memory
+				WE       <= '0';
+			when S_BVF_7 =>
+				IR_Load  <= '0';
+				MAR_Load <= '0';
+				PC_Load  <= '0';
+				PC_INC 	<= '1'; -- Increment PC
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel  <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00";
+				BUS2_Sel <= "00";
+				WE       <= '0';
 
 
 			-- BCT
-
+			when S_BCT_4 =>
+				IR_Load <= '0';
+				MAR_Load <= '1'; -- Overwrites MAR 
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "01"; -- Bus 1 is on Bus 2
+				WE <= '0';
+			when S_BCT_5 => -- Do nothing state - Waits for memory to be available from memory
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+			when S_BCT_6 =>
+				IR_Load <= '0';
+				MAR_Load <= '0';
+				PC_Load <= '1'; -- Loads bus 2 into program counter
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "10"; -- From_memory is on Bus 2
+				WE <= '0';
+			when S_BCT_7 =>
+				IR_Load <= '0';
+				MAR_Load <= '0';
+				PC_Load <= '0';
+				PC_INC 	<= '1'; -- Increment program counter
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+				WE <= '0';
 
 			-- BCF
+			when S_BCF_4 =>
+				IR_Load <= '0';
+				MAR_Load <= '1'; -- Overwrites MAR 
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "01"; -- Bus 1 is on Bus 2
+				WE <= '0';
+			when S_BCF_5 => -- Do nothing state - Waits for memory to be available from memory
+				IR_Load <= '0';
+				MAR_Load <= '0'; 
+				PC_Load <= '0';
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+			when S_BCF_6 =>
+				IR_Load <= '0';
+				MAR_Load <= '0';
+				PC_Load <= '1'; -- Loads bus 2 into program counter
+				PC_INC 	<= '0';
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "10"; -- From_memory is on Bus 2
+				WE <= '0';
+			when S_BCF_7 =>
+				IR_Load <= '0';
+				MAR_Load <= '0';
+				PC_Load <= '0';
+				PC_INC 	<= '1'; -- Increment program counter
+				A_Load 	<= '0';
+				B_Load 	<= '0';
+				ALU_Sel <= "0000";
+				CCR_Load <= '0';
+				BUS1_Sel <= "00"; -- Program counter is on Bus 1
+				BUS2_Sel <= "00"; -- ALU is on Bus 2
+				WE <= '0';
 			end case;
 	end process;
 end architecture;
-
