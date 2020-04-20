@@ -7,7 +7,7 @@
 -- Description:		Random Access Memory for Read/Write
 ----------------------------------------------------------------------------------
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_1164.all;  
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.numeric_std.all;
 
@@ -41,9 +41,11 @@ begin
 	-- Memory access process. 
 	MEMORY : process (CLK)															-- If there is a rising clock edge
 				begin 																	-- and EN = 1, then take whatever is
-					if (rising_edge (CLK)) then									-- on adress ADDR and put in into data_out
-						if (EN = '1') then
-							data_out <= ROM(to_integer(unsigned(ADDR)));
+					if (rising_edge(CLK)) then									-- on adress ADDR and put in into data_out
+						if (EN = '1' and WE = '0') then
+							data_out <= RAM(to_integer(unsigned(ADDR)));
+						elsif(EN = '1' and WE = '1') then
+							RAM(to_integer(unsigned(ADDR))) <= data_in;
 						end if;
 					end if;
 				end process;
