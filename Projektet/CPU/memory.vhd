@@ -53,8 +53,8 @@ entity memory is -- Portdefinition of memoryblock (Module)
          port_out_12 : out std_logic_vector (15 downto 0);
          port_out_13 : out std_logic_vector (15 downto 0);
          port_out_14 : out std_logic_vector (15 downto 0);
-         port_out_15 : out std_logic_vector (15 downto 0)
---			port_out_16 : out std_logic_vector (15 downto 0)
+         port_out_15 : out std_logic_vector (15 downto 0);
+			port_out_16 : out std_logic_vector (15 downto 0)
 			);
 end entity;
 
@@ -266,16 +266,16 @@ begin
 		end if;
 	end process;
 	
---	PORT16 : process(CLK, RST) -- Output port 16, sensitive to clock and reset
---	begin
---		if (RST = '0') then 							-- If reset is 0 then reset.
---			port_out_16 <= x"0000";		
---		elsif (rising_edge(CLK)) then 				-- If there is a rising edge in clock and
---			if (ADDR = x"FFEE" and WE='1') then  -- if adress is port 16 = x"FFEE" and if
---				port_out_16<=data_in;					-- write enable = 1, then write to port 16.
---			end if;
---		end if;
---	end process;
+	PORT16 : process(CLK, RST) -- Output port 16, sensitive to clock and reset
+	begin
+		if (RST = '0') then 							-- If reset is 0 then reset.
+			port_out_16 <= x"0000";		
+		elsif (rising_edge(CLK)) then 				-- If there is a rising edge in clock and
+			if (ADDR = x"FFEE" and WE='1') then  -- if adress is port 16 = x"FFEE" and if
+				port_out_16<=data_in;					-- write enable = 1, then write to port 16.
+			end if;
+		end if;
+	end process;
 	
 	
 ----------------------------------------- DATA OUT MULTIPLEXER ------------------------------------------
@@ -306,7 +306,7 @@ begin
 			elsif (ADDR = x"FFEB") then data_out <= port_in_13;
 			elsif (ADDR = x"FFEC") then data_out <= port_in_14;
 			elsif (ADDR = x"FFED") then data_out <= port_in_15;
-			--elsif (ADDR = x"FFEE") then data_out <= port_in_16;
+			elsif (ADDR = x"FFEE") then data_out <= port_in_15;
 			else data_out <= x"0000";
 			end if;
 		

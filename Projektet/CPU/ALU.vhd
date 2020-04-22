@@ -37,7 +37,7 @@ begin
 ----------------------------------------------------------------------------------
 		if(ALU_Sel = "0000") then
 			Sum_uns := unsigned('0' & A) + unsigned('0' & B);
-			Result  <= std_logic_vector(Sum_uns(16 downto 0));
+			Result  <= std_logic_vector(Sum_uns(15 downto 0));
 			
 			NZVC(3) <= Sum_uns(15);
 			

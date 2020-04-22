@@ -56,7 +56,7 @@ architecture data_path_arch of data_path is
 begin
 
 	-- Portmap definition of subsubmodule:
-	ALU_MAP : alu 	port map(B_out, BUS1, ALU_Sel, NZVC_sig, RES_Sig); 
+	ALU_MAP : alu 	port map(A_out, B_out, RES_Sig, ALU_Sel, NZVC_sig); 
 
 ----------------------------------------------------------------------------------
 -- Bus Lines
