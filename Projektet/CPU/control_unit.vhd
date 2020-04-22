@@ -26,7 +26,7 @@ entity control_unit is
 			CCR_Load	  : out std_logic;
 			BUS2_Sel	  : out std_logic_vector (1 downto 0);
 			BUS1_Sel	  : out std_logic_vector (1 downto 0);
-			ALU_Sel	  : out std_logic_vector (4 downto 0));
+			ALU_Sel	  : out std_logic_vector (3 downto 0));
 end entity;
 
 architecture control_unit_arch of control_unit is
@@ -42,8 +42,8 @@ type state_type is (
 	S_STB_DIR_4, S_STB_DIR_5, S_STB_DIR_6, S_STB_DIR_7,
 	-- DATA MANIP:
 	S_ADD_AB_4,
-	S_ADD_AB_4,
-	S_ADD_BA_4,
+	S_SUB_AB_4,
+	S_SUB_BA_4,
 	S_MUL_AB_4,
 	S_DIV_AB_4,
 	S_DIV_BA_4,
@@ -101,9 +101,9 @@ begin
 ----------------------------------------------------------------------------------
 	STATE_MEMORY : process (CLK, RST)
 		begin
-			if (Reset = '0') then
+			if (RST = '0') then
 				current_state <= S_FETCH_0;
-			elsif (rising_edge (clock)) then
+			elsif (rising_edge(CLK)) then
 				current_state <= next_state;
 			end if;
 		end process;
@@ -156,7 +156,7 @@ begin
 				next_state <= S_NOT_A_4;
 			-- BRANCHES/JUMP
 			elsif (IR = BRA) then
-				next_state <= S_BRA_AB_4; 
+				next_state <= S_BRA_4; 
 				
 			elsif (IR = BNT and CCR_Result(3) = '1') then
 				next_state <= S_BNT_4;

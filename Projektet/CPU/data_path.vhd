@@ -24,7 +24,7 @@ entity data_path is
 			CCR_Load		: in  std_logic; -- Write NZVC data to CCR_Result register (From Control Unit)
 			BUS2_Sel		: in  std_logic_vector (1 downto 0); -- MUX2 address selection onto BUS2, 2 bit (From Control Unit)
 			BUS1_Sel		: in  std_logic_vector (1 downto 0); -- MUX1 address selection onto BUS1, 2 bit (From Control Unit)
-			ALU_Sel		: in  std_logic_vector (3 downto 0); -- ALU operation selection, 4 bit (From Control Unit)
+			ALU_Sel		: inout  std_logic_vector (3 downto 0); -- ALU operation selection, 4 bit (From Control Unit)
 			IR				: out std_logic_vector (15 downto 0); -- Single insctruction register, 16 bit (To Control Unit)
 			CCR_Result	: out std_logic_vector (3 downto 0); -- 4 bit: NZVC (Neg, zero, overflow, carry) error correction holder (To Control Unit)
 			ADDR			: out std_logic_vector (15 downto 0); -- Address to memoryblock, 16 bit
@@ -37,9 +37,9 @@ architecture data_path_arch of data_path is
 	component alu is -- Portdefinition of Data Path (Submodule)
 		port (A			: in  std_logic_vector	(15 downto 0);
 				B			: in  std_logic_vector	(15 downto 0);
-				RES		: out std_logic_vector	(15 downto 0);
+				Result	: out std_logic_vector	(15 downto 0);
 				ALU_Sel	: in  std_logic_vector  (3 downto 0);
-				NCVC		: out std_logic_vector	(3 downto 0));
+				NZVC		: out std_logic_vector	(3 downto 0));
 	end component;
 	
 	

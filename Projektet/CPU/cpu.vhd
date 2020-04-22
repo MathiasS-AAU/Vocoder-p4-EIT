@@ -54,7 +54,7 @@ architecture cpu_arch of cpu is
 				CCR_Load		: in  std_logic; -- Write NZVC data to CCR_Result register (From Control Unit)
 				BUS2_Sel		: in  std_logic_vector (1 downto 0); -- MUX2 address selection onto BUS2, 2 bit (From Control Unit)
 				BUS1_Sel		: in  std_logic_vector (1 downto 0); -- MUX1 address selection onto BUS1, 2 bit (From Control Unit)
-				ALU_Sel		: in  std_logic_vector (3 downto 0); -- ALU operation selection, 4 bit (From Control Unit)
+				ALU_Sel		: inout  std_logic_vector (3 downto 0); -- ALU operation selection, 4 bit (From Control Unit)
 				IR				: out std_logic_vector (15 downto 0); -- Single insctruction register, 16 bit (To Control Unit)
 				CCR_Result	: out std_logic_vector (3 downto 0); -- 4 bit: NZVC (Neg, zero, overflow, carry) error correction holder (To Control Unit)
 				ADDR			: out std_logic_vector (15 downto 0); -- Address to memoryblock, 16 bit
@@ -82,7 +82,7 @@ begin
 	CU : control_unit
 		port map (CLK => CLK,
 					 RST => RST,
-					 IR => IR_Load_sig,
+					 IR => IR_sig,
 					 CCR_Result => CCR_Result_sig,
 					 WE => WE,
 					 IR_Load => IR_Load_sig,

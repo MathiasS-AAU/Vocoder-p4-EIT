@@ -114,8 +114,8 @@ architecture computer_arch of computer is
 begin
 
 	-- Portmap definition of modules:
-	CPU : cpu	port map (CLK => CLK, RST => RST, ADDR => ADDR_sig, WE => WE_sig, to_memory => in_sig, from_memory => out_sig);
-	MEMORY : memory	port map (CLK => CLK, RST => RST, ADDR => ADDR_sig, WE => WE_sig, data_in => in_sig, data_out => out_sig,
+	CPU_MAP : cpu	port map (CLK => CLK, RST => RST, ADDR => ADDR_sig, WE => WE_sig, to_memory => in_sig, from_memory => out_sig);
+	MEMORY_MAP : memory	port map (CLK => CLK, RST => RST, ADDR => ADDR_sig, WE => WE_sig, data_in => in_sig, data_out => out_sig,
 				  port_in_00 => port_in_00,
 				  port_in_01 => port_in_01,
 				  port_in_02 => port_in_02,

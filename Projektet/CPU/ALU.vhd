@@ -13,11 +13,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.numeric_std.all;
 
 entity alu is
-	port (B		: in  std_logic_vector (15 downto 0);
-		 A		: in  std_logic_vector (15 downto 0);
-		 ALU_Sel	: in  std_logic_vector (3 downto 0);
-		 NZVC		: out std_logic_vector (3 downto 0);
-		 Result		: out std_logic_vector (15 downto 0));
+	port (B		  : in  std_logic_vector (15 downto 0);
+			A		  : in  std_logic_vector (15 downto 0);
+			ALU_Sel : in  std_logic_vector (3 downto 0);
+			NZVC	  : out std_logic_vector (3 downto 0);
+			Result  : out std_logic_vector (15 downto 0));
 end entity;
 
 architecture alu_arch of alu is
