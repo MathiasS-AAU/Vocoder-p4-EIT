@@ -15,7 +15,7 @@ entity ram_32733x16_sync is
 	port(CLK	 	  : in std_logic; 							-- Clock signal
 		  WE		  : in std_logic;								-- Write enable
 		  ADDR	  : in std_logic_vector(15 downto 0);  -- Number of adresses
-		  data_out : in std_logic_vector(15 downto 0);  -- Input data, 16 bit
+		  data_in : in std_logic_vector(15 downto 0);  -- Input data, 16 bit
 		  data_out : out std_logic_vector(15 downto 0) -- Output data, 16 bit
         );
 end ram_32733x16_sync;
