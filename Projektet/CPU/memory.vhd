@@ -115,7 +115,7 @@ begin
 			port_out_02 <= x"0000";		
 		elsif (rising_edge(CLK)) then 				-- If there is a rising edge in clock and
 			if (ADDR = x"FFE2" and WE='1') then  -- if adress is port 2 = x"FFE0" and if
-				port_out_00<=data_in;					-- write enable = 1, then write to port 2.
+				port_out_02<=data_in;					-- write enable = 1, then write to port 2.
 			end if;
 		end if;
 	end process;
@@ -279,7 +279,7 @@ begin
 			if (to_integer(unsigned(ADDR)) >=0 and (to_integer(unsigned(ADDR)) <=32767)) then
 					data_out <= rom_data;
 			elsif (to_integer(unsigned(ADDR)) >=32768 and (to_integer(unsigned(ADDR)) <=65501)) then
-					data_out <= rom_data;
+					data_out <= ram_data;
 			elsif (ADDR = x"FFF0") then data_out <= port_in_00;
 			elsif (ADDR = x"FFF1") then data_out <= port_in_01;
 			elsif (ADDR = x"FFF2") then data_out <= port_in_02;

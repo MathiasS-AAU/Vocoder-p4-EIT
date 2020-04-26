@@ -23,7 +23,7 @@ end ram_32733x16_sync;
 architecture ram_32733x16_sync_arch of ram_32733x16_sync is
 	signal EN : std_logic; -- An internal enable that will prevent data_out assignments for addresses outside of this valid range.
 
-	type ram_type is array (32768 to 65501) of std_logic_vector(15 downto 0); -- Random access 16 x 16 bit memory. 32733 adresses of 16 bits.
+	type ram_type is array (32768 to 65503) of std_logic_vector(15 downto 0); -- Random access 16 x 16 bit memory. 32733 adresses of 16 bits.
 	signal RAM : ram_type;
 
 
@@ -31,8 +31,8 @@ begin
 	-- Enable process. Verifies if given adress is within RAM size.
 	ENABLE : process (ADDR)
 				begin
-					if (to_integer(unsigned(ADDR)) >=32768 and (to_integer(unsigned(ADDR)) <=65501)) then
-						EN <= '1';		-- If 32768 <= ADDR <= 65501 then set EN to 1.
+					if (to_integer(unsigned(ADDR)) >=32768 and (to_integer(unsigned(ADDR)) <=65503)) then
+						EN <= '1';		-- If 32768 <= ADDR <= 65503 then set EN to 1.
 					else
 						EN <='0';
 					end if;

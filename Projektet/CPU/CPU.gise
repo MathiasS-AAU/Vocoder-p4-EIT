@@ -22,19 +22,33 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="CPU.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="computer.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="computer.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="computer.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="computer.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="computer.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="computer.ngr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="computer.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="computer.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="computer.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="computer.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="computer_envsettings.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="computer_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="computer_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="computer_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="computer_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="computer_ngdbuild.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="computer_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="computer_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="data_path.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="data_path.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="data_path.xst"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
@@ -67,17 +81,16 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1587035927" xil_pn:in_ck="-215837577955463835" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7604902640981379944" xil_pn:start_ts="1587035921">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1587898972" xil_pn:in_ck="-215837577955463835" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7604902640981379944" xil_pn:start_ts="1587898933">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="computer.lso"/>
+      <outfile xil_pn:name="computer.ngc"/>
+      <outfile xil_pn:name="computer.ngr"/>
       <outfile xil_pn:name="computer.prj"/>
+      <outfile xil_pn:name="computer.stx"/>
       <outfile xil_pn:name="computer.syr"/>
       <outfile xil_pn:name="computer.xst"/>
       <outfile xil_pn:name="computer_xst.xrpt"/>
@@ -87,6 +100,26 @@
     <transform xil_pn:end_ts="1586963705" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="2601099008714518262" xil_pn:start_ts="1586963705">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1587898982" xil_pn:in_ck="5178895322046123381" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2639232965019727462" xil_pn:start_ts="1587898972">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="computer.bld"/>
+      <outfile xil_pn:name="computer.ngd"/>
+      <outfile xil_pn:name="computer_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1587899015" xil_pn:in_ck="5178895322046123382" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="6093601622908603872" xil_pn:start_ts="1587898982">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="computer_map.map"/>
+      <outfile xil_pn:name="computer_map.mrp"/>
+      <outfile xil_pn:name="computer_map.ngm"/>
+      <outfile xil_pn:name="computer_map.xrpt"/>
     </transform>
   </transforms>
 
