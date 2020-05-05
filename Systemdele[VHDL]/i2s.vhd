@@ -15,8 +15,8 @@ ENTITY i2s IS PORT(
 	SD_out : INOUT STD_LOGIC; -- Serial data
 	--Databehandling
     data_in_L_buff   : INOUT STD_LOGIC_VECTOR(15 downto 0); -- input 16 bit signed værdi
-	data_out_buff_L   : INOUT STD_LOGIC_VECTOR(15 downto 0); -- output 16 bit signed værdi.
-	data_out_buff_R   : INOUT STD_LOGIC_VECTOR(15 downto 0); -- output 16 bit signed værdi. Gentagelse af data_out_buff_L
+	data_out_L_buff   : INOUT STD_LOGIC_VECTOR(15 downto 0); -- output 16 bit signed værdi.
+	data_out_R_buff   : INOUT STD_LOGIC_VECTOR(15 downto 0); -- output 16 bit signed værdi. Gentagelse af data_out_buff_L
 	Ch_counter_L : INOUT STD_LOGIC_VECTOR(4 downto 0); -- Channel counter left. Bruges til at håndtere overlap
 	Ch_counter_R : INOUT STD_LOGIC_VECTOR(4 downto 0) -- Channel counter right. Bruges til at håndtere overlap
 );
