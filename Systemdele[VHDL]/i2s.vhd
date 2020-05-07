@@ -27,7 +27,7 @@ ARCHITECTURE description OF i2s IS--
 
 	--Skifteregistre
 	signal 	data_in_L_buff   :  STD_LOGIC_VECTOR(data_width-1 downto 0) := (others => '0'); -- input 16 bit signed værdi
-	signal	data_out_L_buff   :  STD_LOGIC_VECTOR(data_width-1 downto 0) := (others => '0'); -- output 16 bit signed værdi.
+	signal	data_out_buff   :  STD_LOGIC_VECTOR(data_width-1 downto 0) := (others => '0'); -- output 16 bit signed værdi.
 	signal	data_out_R_buff   :  STD_LOGIC_VECTOR(data_width-1 downto 0) := (others => '0'); -- output 16 bit signed værdi. Gentagelse af data_out_buff_L
 	
 	--Edge detector
@@ -50,7 +50,7 @@ ARCHITECTURE description OF i2s IS--
 	signal	Ch_counter :  STD_LOGIC_VECTOR(4 downto 0) :=Two_cycles_after_LSB; -- Channel counter left. Bruges til at håndtere overlap
 	
 BEGIN
-	SD_out <= data_out_L_buff(data_width-1);
+	SD_out <= data_out_buff(data_width-1);
 	-- Viser de to sidste WS målinger. Bruges til at tjekke om WS er rising eller falling. MÅ KUN TJEKKES PÅ FALLING_EDGE(SCK)!
 WS_state_P :  process (SCK, WS)
 				begin
@@ -94,26 +94,15 @@ Output : process(SCK, WS_state) -- Det er SCK og Ch_counter_L der bestemmer hvor
 				if falling_edge(SCK) then
 					if WS_state = Falling then
 						--Sæt dual mono output værdi
-						data_out_L_buff <= data_out;
+						data_out_buff <= data_out;
 						data_out_R_buff <= data_out;
 					elsif WS_state = Rising then
-					   data_out_L_buff <= data_out_R_buff;
+					   data_out_buff <= data_out_R_buff;
 					end if;
-					if (WS_state = Falling) then --Hvis Ch_counter_L er 15 til 0. D.v.s. hvis venstre kanal er aktiv
+					if (WS_state = Low) or (WS_state = High) then --Hvis Ch_counter_L er 15 til 0. D.v.s. hvis venstre kanal er aktiv
 
 						--Output MSB først
-						--SD_out <= data_out_L_buff(data_width-1);
-					elsif (WS_state = Low) or (WS_state = High) then --Hvis Ch_counter_L er 15 til 0. D.v.s. hvis venstre kanal er aktiv
-
-						--Output MSB først
-						--SD_out <= data_out_L_buff(data_width-1);
-						data_out_L_buff <= data_out_L_buff(data_width-2 downto 0) & '0'; --Læs en bit af gangen ind i buffer MSB først
-					
-					--elsif  (WS_state = Rising) then --Hvis Ch_counter_R er 15 til 0. D.v.s. hvis Højre kanal er aktiv
-						--SD_out <= data_out_R_buff(data_width-1);
-					--elsif  (WS_state = High) then --Hvis Ch_counter_R er 15 til 0. D.v.s. hvis Højre kanal er aktiv
-						--SD_out <= data_out_R_buff(data_width-1);
-						--data_out_R_buff <= data_out_R_buff(data_width-2 downto 0) & '0'; --Læs en bit af gangen ind i buffer MSB først
+						data_out_buff <= data_out_buff(data_width-2 downto 0) & '0'; --Læs en bit af gangen ind i buffer MSB først
 					
 					end if;
 				 end if;
