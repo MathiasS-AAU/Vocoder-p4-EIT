@@ -35,7 +35,12 @@
 			Signal SD_out : STD_LOGIC := '0'; -- Serial data
           
 			constant SCK_period : time := 40 ns; --25 MHz
-
+			
+			--values
+			constant value1 : std_logic_vector(15 downto 0) :=x"FAFA";
+			constant value2 : std_logic_vector(15 downto 0) :=x"AFAF";
+			constant value1_L : std_logic_vector(23 downto 0) :=x"FAFAAF";
+			constant value2_L : std_logic_vector(23 downto 0) :=x"AFAFFA";
   BEGIN
 
   -- Component Instantiation
@@ -47,17 +52,18 @@
 						SD_in => SD_in,
 						SD_out => SD_out
           );
+			 
+			 
 	-- clock process
 		serial_clock : PROCESS
 		BEGIN
-		for i in 0 to 50 loop
 		SCK <= '0';
 		wait for SCK_period/2;
 		SCK <= '1';
 		wait for SCK_period/2;
-		end loop;
 		END PrOcEsS;
   
+		data_out <= data_in;
   --  Test Bench Statements
      tb : PROCESS
      BEGIN
@@ -66,18 +72,62 @@
 		  WS <= '0';
 		  SD_in <= '0';
 		  
-		  for i in 0 to 7 loop
+		  for i in 0 to 23 loop
 			wait for SCK_period;
 			SD_in <= '1';
 		  end loop;
-		  
-		  WS <= '1';
+		  --data_out <= Value1;
+		  WS <= not WS;-- 1
 		  SD_in <= '1';
 		  
-		  for i in 0 to 7 loop
+		  for i in 0 to 23 loop
 			wait for SCK_period;
 			SD_in <= '0';
 		  end loop;
+		  WS <= not WS; --0
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= Value1_L(23-i);
+		  end loop;
+		  --data_out <= Value2;
+		  WS <= not WS;--1
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= '0';
+		  end loop;
+		  WS <= not WS;--0
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= Value2_L(23-i);
+		  end loop;
+		  --data_out <= Value1;
+		  WS <= not WS;--1
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= '0';
+		  end loop;
+		  WS <= not WS;--0
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= Value1_L(23-i);
+		  end loop;
+		  --data_out <= Value2;
+		  WS <= not WS;--1
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= '0';
+		  end loop;
+		  WS <= not WS;--0
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= Value2_L(23-i);
+		  end loop;
+		  WS <= not WS;--1
+		  for i in 0 to 23 loop
+			wait for SCK_period;
+			SD_in <= '0';
+		  end loop;
+		  WS <= not WS;--0
         -- Add user defined stimulus here
 
         wait; -- will wait forever
