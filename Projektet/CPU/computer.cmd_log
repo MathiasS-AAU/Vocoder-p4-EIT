@@ -17,3 +17,7 @@ xst -intstyle ise -ifn "D:/Skole/GitHub/Vocoder-p4-EIT/Projektet/CPU/computer.xs
 xst -intstyle ise -ifn "D:/Skole/GitHub/Vocoder-p4-EIT/Projektet/CPU/computer.xst" -ofn "D:/Skole/GitHub/Vocoder-p4-EIT/Projektet/CPU/computer.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 computer.ngc computer.ngd  
 map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o computer_map.ncd computer.ngd computer.pcf 
+xst -intstyle ise -ifn "C:/Users/bjark/Documents/Uni/Semesterprojekter/P4 - Design af Digitale Systemer/P4git/Vocoder-p4-EIT/Projektet/CPU/computer.xst" -ofn "C:/Users/bjark/Documents/Uni/Semesterprojekter/P4 - Design af Digitale Systemer/P4git/Vocoder-p4-EIT/Projektet/CPU/computer.syr" 
+xst -intstyle ise -ifn "C:/Users/bjark/Documents/Uni/Semesterprojekter/P4 - Design af Digitale Systemer/P4git/Vocoder-p4-EIT/Projektet/CPU/computer.xst" -ofn "C:/Users/bjark/Documents/Uni/Semesterprojekter/P4 - Design af Digitale Systemer/P4git/Vocoder-p4-EIT/Projektet/CPU/computer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 "computer.ngc" computer.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o computer_map.ncd computer.ngd computer.pcf 

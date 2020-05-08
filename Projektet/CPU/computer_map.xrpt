@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Sun Apr 26 13:03:34 2020">
+  <application stringID="Map" timeStamp="Fri May 08 13:56:32 2020">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Skole\ISE\Isim\14.7\ISE_DS\ISE\\lib\nt64;D:\Skole\ISE\Isim\14.7\ISE_DS\ISE\\bin\nt64;D:\Skole\ISE\Isim\14.7\ISE_DS\ISE\bin\nt64;D:\Skole\ISE\Isim\14.7\ISE_DS\ISE\lib\nt64;D:\Skole\ISE\Isim\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Skole\ISE\Isim\14.7\ISE_DS\PlanAhead\bin;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\bin\nt64;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\lib\nt64;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\gnuwin\bin;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Skole\ISE\Isim\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Skole\ISE\Isim\14.7\ISE_DS\common\bin\nt64;D:\Skole\ISE\Isim\14.7\ISE_DS\common\lib\nt64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\MinGW\bin;C:\Users\Kristoffer Korsgaard\AppData\Local\Microsoft\WindowsApps;C:\Users\Kristoffer Korsgaard\AppData\Local\GitHubDesktop\bin"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Programs\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Programs\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Programs\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\System32\OpenSSH\;D:\Matlab\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\MinGW\bin;C:\Users\bjark\AppData\Local\Microsoft\WindowsApps;C:\Users\bjark\AppData\Local\GitHubDesktop\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -20,32 +20,32 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="D:\Skole\ISE\Isim\14.7\ISE_DS\ISE\"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="D:\Skole\ISE\Isim\14.7\ISE_DS\ISE"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="D:\Skole\ISE\Isim\14.7\ISE_DS\EDK"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="D:\Skole\ISE\Isim\14.7\ISE_DS\PlanAhead"/>
+          <item stringID="value" value="D:\Programs\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="DESKTOP-E02OIRH"/>
+      <item stringID="User_EnvHost" value="LAPTOP-V03D5LUJ"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i7-7800X CPU @ 3.50GHz"/>
-          <item stringID="speed" value="3504 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz"/>
+          <item stringID="speed" value="2808 MHz"/>
         </row>
       </table>
     </section>
@@ -65,16 +65,16 @@
       <item DEFAULT="None" label="-p" stringID="MAP_PARTNAME" value="xc6slx9-tqg144-3"/>
     </section>
     <task stringID="MAP_PACK_REPORT">
-      <item AVAILABLE="11440" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="409">
-        <item dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="380"/>
-        <item dataType="int" stringID="MAP_NUM_SLICE_LATCH" value="28"/>
+      <item AVAILABLE="11440" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="463">
+        <item dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="437"/>
+        <item dataType="int" stringID="MAP_NUM_SLICE_LATCH" value="25"/>
         <item dataType="int" stringID="MAP_NUM_SLICE_LATCHTHRU" value="0"/>
         <item dataType="int" stringID="MAP_NUM_SLICE_LATCHLOGIC" value="1"/>
       </item>
-      <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTs" stringID="MAP_SLICE_LUTS" value="19135">
-        <item dataType="int" label="Number using O5 output only" stringID="MAP_NUM_LOGIC_O5ONLY" value="1"/>
-        <item dataType="int" label="Number using O6 output only" stringID="MAP_NUM_LOGIC_O6ONLY" value="2246"/>
-        <item dataType="int" label="Number using O5 and O6" stringID="MAP_NUM_LOGIC_O5ANDO6" value="504"/>
+      <item AVAILABLE="5720" dataType="int" label="Number of Slice LUTs" stringID="MAP_SLICE_LUTS" value="19386">
+        <item dataType="int" label="Number using O5 output only" stringID="MAP_NUM_LOGIC_O5ONLY" value="3"/>
+        <item dataType="int" label="Number using O6 output only" stringID="MAP_NUM_LOGIC_O6ONLY" value="2528"/>
+        <item dataType="int" label="Number using O5 and O6" stringID="MAP_NUM_LOGIC_O5ANDO6" value="471"/>
         <item dataType="int" stringID="MAP_NUM_ROM_O5ONLY" value="0"/>
         <item dataType="int" stringID="MAP_NUM_ROM_O6ONLY" value="0"/>
         <item dataType="int" stringID="MAP_NUM_ROM_O5ANDO6" value="0"/>
@@ -128,7 +128,7 @@
       <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_SUSPEND_SYNC" value="0"/>
     </section>
     <section stringID="MAP_BUFG_DATA">
-      <item dataType="int" label="Number used as BUFGs" stringID="MAP_NUM_BUFG" value="2"/>
+      <item dataType="int" label="Number used as BUFGs" stringID="MAP_NUM_BUFG" value="1"/>
       <item dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="0"/>
       <item dataType="int" stringID="MAP_AVAILABLE" value="16"/>
       <item dataType="int" stringID="MAP_HARD_MACROS" value="0"/>
