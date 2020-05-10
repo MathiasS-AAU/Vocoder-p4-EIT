@@ -66,8 +66,6 @@ Counter :	process (SCK, WS_state) -- Det er SCK og WS_state der bestemmer hvornå
 					if falling_edge(SCK) then
 						if WS_state = falling then
 							Ch_counter <= MSB_cycle; -- Start på 15 også kaldt MSB_cycle.
-						elsif WS_state = rising then --Bør kun forekomme ved første læste sample.
-							Ch_counter <= One_cycle_after_LSB; --stop med at læse med det samme hvis kanalen skifter for tidligt. Datakorruption af ét sample.
 						elsif Ch_counter /= One_cycle_after_LSB then -- Gør ingenting efter -1 også kaldt One_cycle_after_LSB.
 							Ch_counter <= Ch_counter - 1; --Tæl ned
 						end if;
