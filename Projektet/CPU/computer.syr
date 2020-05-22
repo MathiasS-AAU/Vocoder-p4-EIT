@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: computer.prj
 
@@ -105,28 +105,28 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd" into library work
 Parsing entity <alu>.
 Parsing architecture <alu_arch> of entity <alu>.
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd" into library work
 Parsing entity <rom_32767x16_sync>.
 Parsing architecture <rom_32767x16_sync_arch> of entity <rom_32767x16_sync>.
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\ram_32767x16_sync.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\ram_32767x16_sync.vhd" into library work
 Parsing entity <ram_32733x16_sync>.
 Parsing architecture <ram_32733x16_sync_arch> of entity <ram_32733x16_sync>.
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" into library work
 Parsing entity <data_path>.
 Parsing architecture <data_path_arch> of entity <data_path>.
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd" into library work
 Parsing entity <control_unit>.
 Parsing architecture <control_unit_arch> of entity <control_unit>.
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\memory.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\memory.vhd" into library work
 Parsing entity <memory>.
 Parsing architecture <memory_arch> of entity <memory>.
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\cpu.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\cpu.vhd" into library work
 Parsing entity <cpu>.
 Parsing architecture <cpu_arch> of entity <cpu>.
-Parsing VHDL file "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\computer.vhd" into library work
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\computer.vhd" into library work
 Parsing entity <computer>.
 Parsing architecture <computer_arch> of entity <computer>.
 
@@ -139,6 +139,7 @@ Elaborating entity <computer> (architecture <computer_arch>) from library <work>
 Elaborating entity <cpu> (architecture <cpu_arch>) from library <work>.
 
 Elaborating entity <control_unit> (architecture <control_unit_arch>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd" Line 384: next_state should be on the sensitivity list of the process
 
 Elaborating entity <data_path> (architecture <data_path_arch>) from library <work>.
 
@@ -155,20 +156,20 @@ Elaborating entity <ram_32733x16_sync> (architecture <ram_32733x16_sync_arch>) f
 =========================================================================
 
 Synthesizing Unit <computer>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\computer.vhd".
-INFO:Xst:3210 - "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\computer.vhd" line 118: Output port <port_out_16> of the instance <MEMORY_MAP> is unconnected or connected to loadless signal.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\computer.vhd".
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\computer.vhd" line 118: Output port <port_out_16> of the instance <MEMORY_MAP> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <computer> synthesized.
 
 Synthesizing Unit <cpu>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\cpu.vhd".
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\cpu.vhd".
     Summary:
 	no macro.
 Unit <cpu> synthesized.
 
 Synthesizing Unit <control_unit>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd".
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd".
     Found 7-bit register for signal <current_state>.
     Found 128x15-bit Read Only RAM for signal <_n0969>
     Found 64x2-bit Read Only RAM for signal <_n1034>
@@ -188,7 +189,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be g
 Unit <control_unit> synthesized.
 
 Synthesizing Unit <data_path>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd".
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd".
     Found 16-bit register for signal <MAR_out>.
     Found 16-bit register for signal <A_out>.
     Found 16-bit register for signal <B_out>.
@@ -205,7 +206,7 @@ Synthesizing Unit <data_path>.
 Unit <data_path> synthesized.
 
 Synthesizing Unit <alu>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd".
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd".
     Found 17-bit adder for signal <GND_19_o_GND_19_o_add_0_OUT> created at line 31.
     Found 17-bit subtractor for signal <GND_19_o_GND_19_o_sub_2_OUT<16:0>> created at line 34.
     Found 17-bit subtractor for signal <GND_19_o_GND_19_o_sub_3_OUT<16:0>> created at line 37.
@@ -314,7 +315,7 @@ Synthesizing Unit <div_16s_16s>.
 Unit <div_16s_16s> synthesized.
 
 Synthesizing Unit <memory>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\memory.vhd".
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\memory.vhd".
 WARNING:Xst:653 - Signal <port_out_16> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 16-bit register for signal <port_out_01>.
     Found 16-bit register for signal <port_out_02>.
@@ -342,16 +343,18 @@ WARNING:Xst:653 - Signal <port_out_16> is used but never assigned. This sourcele
 Unit <memory> synthesized.
 
 Synthesizing Unit <rom_32767x16_sync>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd".
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd".
     Found 16-bit register for signal <data_out>.
-    Found 16-bit comparator greater for signal <n0000> created at line 63
+    Found 32768x16-bit Read Only RAM for signal <ADDR[14]_GND_41_o_wide_mux_1_OUT>
+    Found 16-bit comparator lessequal for signal <n0000> created at line 63
     Summary:
+	inferred   1 RAM(s).
 	inferred  16 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <rom_32767x16_sync> synthesized.
 
 Synthesizing Unit <ram_32733x16_sync>.
-    Related source file is "C:\Users\bjark\Documents\Uni\Semesterprojekter\P4 - Design af Digitale Systemer\P4git\Vocoder-p4-EIT\Projektet\CPU\ram_32767x16_sync.vhd".
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\ram_32767x16_sync.vhd".
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <RAM>, simulation mismatch.
     Found 65504x16-bit single-port RAM <Mram_RAM> for signal <RAM>.
     Found 16-bit register for signal <data_out>.
@@ -368,8 +371,9 @@ Unit <ram_32733x16_sync> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 3
+# RAMs                                                 : 4
  128x15-bit single-port Read Only RAM                  : 1
+ 32768x16-bit single-port Read Only RAM                : 1
  64x2-bit single-port Read Only RAM                    : 1
  65504x16-bit single-port RAM                          : 1
 # Multipliers                                          : 1
@@ -401,8 +405,8 @@ Macro Statistics
 # Latches                                              : 25
  1-bit latch                                           : 25
 # Comparators                                          : 40
- 16-bit comparator greater                             : 3
- 16-bit comparator lessequal                           : 5
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 6
  17-bit comparator greater                             : 2
  18-bit comparator greater                             : 2
  19-bit comparator greater                             : 2
@@ -437,22 +441,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_3> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_4> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_5> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_6> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_8> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_9> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_10> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_11> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_12> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_13> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_14> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_15> (without init value) has a constant value of 0 in block <ROM>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <control_unit>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0969> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -498,12 +486,32 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM> will be implemented on LUTs eit
     -----------------------------------------------------------------------
 Unit <ram_32733x16_sync> synthesized (advanced).
 
+Synthesizing (advanced) Unit <rom_32767x16_sync>.
+INFO:Xst:3226 - The RAM <Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 16-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     enA            | connected to signal <EN>            | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ADDR<14:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <rom_32767x16_sync> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 3
+# RAMs                                                 : 4
  128x15-bit single-port distributed Read Only RAM      : 1
+ 32768x16-bit single-port block Read Only RAM          : 1
  64x2-bit single-port distributed Read Only RAM        : 1
  65504x16-bit single-port distributed RAM              : 1
 # Multipliers                                          : 1
@@ -515,11 +523,11 @@ Macro Statistics
  17-bit subtractor                                     : 2
 # Counters                                             : 1
  16-bit up counter                                     : 1
-# Registers                                            : 363
- Flip-Flops                                            : 363
+# Registers                                            : 347
+ Flip-Flops                                            : 347
 # Comparators                                          : 40
- 16-bit comparator greater                             : 3
- 16-bit comparator lessequal                           : 5
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 6
  17-bit comparator greater                             : 2
  18-bit comparator greater                             : 2
  19-bit comparator greater                             : 2
@@ -554,22 +562,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_3> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_4> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_5> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_6> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_8> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_9> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_10> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_11> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_12> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_13> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_14> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_15> (without init value) has a constant value of 0 in block <rom_32767x16_sync>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
    incompatible with the Spartan6 architecture. The two primary causes of this is
    either a register or latch described with both an asynchronous set and
@@ -608,10 +600,40 @@ Optimizing unit <data_path> ...
 Optimizing unit <alu> ...
 
 Optimizing unit <control_unit> ...
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT5> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT9> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT7> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT11> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT15> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT13> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT17> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT21> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT19> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT23> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT25> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT27> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT31> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT1>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT29> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT8> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT12> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT10> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT14> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT18> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT16> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT20> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT24> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT22> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT26> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT28> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT30> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT2>, <ROM/Mram_ADDR[14]_GND_41_o_wide_mux_1_OUT32> are equivalent, second RAM is removed
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block computer, actual ratio is 89.
+Found area constraint ratio of 100 (+ 5) on block computer, actual ratio is 88.
 FlipFlop CPU_MAP/DP/A_out_0 has been replicated 3 time(s)
 FlipFlop CPU_MAP/DP/A_out_1 has been replicated 3 time(s)
 FlipFlop CPU_MAP/DP/A_out_10 has been replicated 3 time(s)
@@ -651,8 +673,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 437
- Flip-Flops                                            : 437
+# Registers                                            : 438
+ Flip-Flops                                            : 438
 
 =========================================================================
 
@@ -675,28 +697,29 @@ Top Level Output File Name         : computer.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5118
+# BELS                             : 5074
 #      GND                         : 1
-#      INV                         : 90
+#      INV                         : 91
 #      LUT1                        : 2
-#      LUT2                        : 123
-#      LUT3                        : 235
-#      LUT4                        : 618
-#      LUT5                        : 314
-#      LUT6                        : 2013
+#      LUT2                        : 106
+#      LUT3                        : 234
+#      LUT4                        : 602
+#      LUT5                        : 292
+#      LUT6                        : 2024
 #      MUXCY                       : 513
 #      MUXF7                       : 562
 #      MUXF8                       : 272
 #      VCC                         : 1
 #      XORCY                       : 374
-# FlipFlops/Latches                : 462
+# FlipFlops/Latches                : 463
 #      FDC                         : 7
 #      FDCE                        : 414
-#      FDE                         : 16
+#      FDE                         : 17
 #      LD                          : 20
 #      LDC                         : 5
-# RAMS                             : 4096
+# RAMS                             : 4098
 #      RAM256X1S                   : 4096
+#      RAMB16BWER                  : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 513
@@ -712,24 +735,26 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             462  out of  11440     4%  
- Number of Slice LUTs:                19779  out of   5720   345% (*) 
-    Number used as Logic:              3395  out of   5720    59%  
+ Number of Slice Registers:             463  out of  11440     4%  
+ Number of Slice LUTs:                19735  out of   5720   345% (*) 
+    Number used as Logic:              3351  out of   5720    58%  
     Number used as Memory:            16384  out of   1440   1137% (*) 
        Number used as RAM:            16384
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  20047
-   Number with an unused Flip Flop:   19585  out of  20047    97%  
-   Number with an unused LUT:           268  out of  20047     1%  
-   Number of fully used LUT-FF pairs:   194  out of  20047     0%  
-   Number of unique control sets:        28
+ Number of LUT Flip Flop pairs used:  20010
+   Number with an unused Flip Flop:   19547  out of  20010    97%  
+   Number with an unused LUT:           275  out of  20010     1%  
+   Number of fully used LUT-FF pairs:   188  out of  20010     0%  
+   Number of unique control sets:        29
 
 IO Utilization: 
  Number of IOs:                         514
  Number of bonded IOBs:                 514  out of    102   503% (*) 
 
 Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
  Number of DSP48A1s:                      1  out of     16     6%  
 
@@ -756,7 +781,7 @@ Clock Information:
 ---------------------------------------------------------------------------------------------------+---------------------------------------+-------+
 Clock Signal                                                                                       | Clock buffer(FF name)                 | Load  |
 ---------------------------------------------------------------------------------------------------+---------------------------------------+-------+
-CLK                                                                                                | BUFGP                                 | 4533  |
+CLK                                                                                                | BUFGP                                 | 4536  |
 CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_24_o_Mux_15_o(CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_24_o_Mux_15_o1:O)| NONE(*)(CPU_MAP/DP/ALU_MAP/Sum_sign_0)| 17    |
 CPU_MAP/CU/_n0969<14>(CPU_MAP/CU_Mram__n0969141:O)                                                 | NONE(*)(CPU_MAP/CU/WE)                | 1     |
 CPU_MAP/CU/GND_8_o_GND_8_o_OR_91_o(CPU_MAP/CU/GND_8_o_GND_8_o_OR_91_o:O)                           | NONE(*)(CPU_MAP/CU/next_state_2)      | 5     |
@@ -776,7 +801,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 50.455ns (Maximum Frequency: 19.819MHz)
-   Minimum input arrival time before clock: 11.362ns
+   Minimum input arrival time before clock: 9.055ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -787,7 +812,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 50.455ns (frequency: 19.819MHz)
-  Total number of paths / destination ports: 372229730363817370000000 / 41580
+  Total number of paths / destination ports: 372229730363816900000000 / 41612
 -------------------------------------------------------------------------
 Delay:               50.455ns (Levels of Logic = 127)
   Source:            CPU_MAP/DP/B_out_5 (FF)
@@ -936,24 +961,22 @@ Delay:               50.455ns (Levels of Logic = 127)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
   Total number of paths / destination ports: 11333 / 575
 -------------------------------------------------------------------------
-Offset:              11.362ns (Levels of Logic = 26)
-  Source:            port_in_13<0> (PAD)
+Offset:              9.055ns (Levels of Logic = 24)
+  Source:            port_in_14<0> (PAD)
   Destination:       CPU_MAP/DP/PC_uns_15 (FF)
   Destination Clock: CLK rising
 
-  Data Path: port_in_13<0> to CPU_MAP/DP/PC_uns_15
+  Data Path: port_in_14<0> to CPU_MAP/DP/PC_uns_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.684  port_in_13_0_IBUF (port_in_13_0_IBUF)
-     LUT6:I4->O            1   0.203   0.944  CPU_MAP/DP/Mmux_BUS2114_SW0 (N399)
-     LUT6:I0->O            1   0.203   0.924  CPU_MAP/DP/Mmux_BUS2114 (CPU_MAP/DP/Mmux_BUS217)
-     LUT5:I0->O            1   0.203   0.827  CPU_MAP/DP/Mmux_BUS2115 (CPU_MAP/DP/Mmux_BUS218)
-     LUT4:I0->O            1   0.203   0.944  CPU_MAP/DP/Mmux_BUS2117_SW0 (N365)
-     LUT6:I0->O            1   0.203   0.827  CPU_MAP/DP/Mmux_BUS2117 (CPU_MAP/DP/Mmux_BUS2110)
-     LUT6:I2->O            3   0.203   0.651  CPU_MAP/DP/Mmux_BUS2119 (CPU_MAP/DP/Mmux_BUS2112)
-     LUT4:I3->O            2   0.205   0.981  CPU_MAP/DP/Mmux_BUS2121_SW0 (N46)
-     LUT6:I0->O            1   0.203   0.808  CPU_MAP/DP/Mmux_BUS2120_SW0 (N283)
+     IBUF:I->O             1   1.222   0.944  port_in_14_0_IBUF (port_in_14_0_IBUF)
+     LUT6:I0->O            1   0.203   0.684  CPU_MAP/DP/Mmux_BUS2114_SW0 (N365)
+     LUT6:I4->O            1   0.203   0.808  CPU_MAP/DP/Mmux_BUS2114 (CPU_MAP/DP/Mmux_BUS217)
+     LUT6:I3->O            1   0.205   0.808  CPU_MAP/DP/Mmux_BUS2115 (CPU_MAP/DP/Mmux_BUS218)
+     LUT6:I3->O            3   0.205   0.651  CPU_MAP/DP/Mmux_BUS2116 (CPU_MAP/DP/Mmux_BUS219)
+     LUT4:I3->O            2   0.205   0.981  CPU_MAP/DP/Mmux_BUS2118_SW0 (N46)
+     LUT6:I0->O            1   0.203   0.808  CPU_MAP/DP/Mmux_BUS2117_SW0 (N283)
      LUT6:I3->O            1   0.205   0.000  CPU_MAP/DP/Mcount_PC_uns_lut<0> (CPU_MAP/DP/Mcount_PC_uns_lut<0>)
      MUXCY:S->O            1   0.172   0.000  CPU_MAP/DP/Mcount_PC_uns_cy<0> (CPU_MAP/DP/Mcount_PC_uns_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  CPU_MAP/DP/Mcount_PC_uns_cy<1> (CPU_MAP/DP/Mcount_PC_uns_cy<1>)
@@ -973,8 +996,8 @@ Offset:              11.362ns (Levels of Logic = 26)
      XORCY:CI->O           1   0.180   0.000  CPU_MAP/DP/Mcount_PC_uns_xor<15> (CPU_MAP/DP/Mcount_PC_uns15)
      FDCE:D                    0.102          CPU_MAP/DP/PC_uns_15
     ----------------------------------------
-    Total                     11.362ns (3.773ns logic, 7.589ns route)
-                                       (33.2% logic, 66.8% route)
+    Total                      9.055ns (3.371ns logic, 5.684ns route)
+                                       (37.2% logic, 62.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -1017,7 +1040,7 @@ Clock to Setup on destination clock CPU_MAP/CU/GND_8_o_GND_8_o_OR_91_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |         |         |    7.850|         |
+CLK            |         |         |    7.870|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CPU_MAP/CU/_n0969<14>
@@ -1047,14 +1070,14 @@ CLK            |         |         |   49.532|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 39.00 secs
-Total CPU time to Xst completion: 38.85 secs
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 36.45 secs
  
 --> 
 
-Total memory usage is 4952760 kilobytes
+Total memory usage is 4953080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   61 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :   30 (   0 filtered)
+Number of infos    :   36 (   0 filtered)
 

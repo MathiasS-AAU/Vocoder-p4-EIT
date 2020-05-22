@@ -11,6 +11,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.numeric_std.all;
 
+
 entity ram_32733x16_sync is
 	port(CLK	 	  : in std_logic; 							-- Clock signal
 		  WE		  : in std_logic;								-- Write enable

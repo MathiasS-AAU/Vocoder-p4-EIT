@@ -60,7 +60,7 @@ end entity;
 
 architecture memory_arch of memory is
 
-	component ram_32733x16_sync is -- Portdefinition of Data Memoryblock for Read/write (Submodule)
+	component BRAM_32733x16_sync is -- Portdefinition of Data Memoryblock for Read/write (Submodule)
 		port (CLK		: in  std_logic; -- Clock
 		      WE			: in  std_logic; -- Write enable
 		      ADDR		: in  std_logic_vector(15 downto 0);  -- Adress, 16 bit
@@ -82,7 +82,7 @@ begin
 
 	-- Portmap definition of submodules for outputlogic
 	ROM : rom_32767x16_sync 	port map (CLK, ADDR, rom_data);
-	RAM  : ram_32733x16_sync	port map (CLK, WE, ADDR, data_in, ram_data);
+	RAM  : BRAM_32733x16_sync	port map (CLK, WE, ADDR, data_in, ram_data);
 
 
 	---------------------------------- 16 OUTPUT PORTS ------------------------------------------------------

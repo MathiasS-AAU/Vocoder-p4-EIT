@@ -53,7 +53,7 @@ architecture rom_32767x16_sync_arch of rom_32767x16_sync is
 
 	type rom_type is array (0 to 32767) of std_logic_vector(15 downto 0); -- Read only 16 x 16 bit memory. 32767 adresses of 16 bits.
 	constant ROM : rom_type := ( --Write code to be executed here
-	
+	x"FFFF",
 	
 											others => x"0000"); -- Unused ROM is set to value 0.
 begin								

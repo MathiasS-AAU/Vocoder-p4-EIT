@@ -1,0 +1,1532 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Vocoder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Vocoder.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Vocoder"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Vocoder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <alu_arch> of entity <alu>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd" into library work
+Parsing entity <rom_32767x16_sync>.
+Parsing architecture <rom_32767x16_sync_arch> of entity <rom_32767x16_sync>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd" into library work
+Parsing entity <data_path>.
+Parsing architecture <data_path_arch> of entity <data_path>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd" into library work
+Parsing entity <control_unit>.
+Parsing architecture <control_unit_arch> of entity <control_unit>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\BRAM_32767x16.vhd" into library work
+Parsing entity <BRAM_32733x16_sync>.
+Parsing architecture <BRAM_32733x16_sync_arch> of entity <bram_32733x16_sync>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\memory.vhd" into library work
+Parsing entity <memory>.
+Parsing architecture <memory_arch> of entity <memory>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\cpu.vhd" into library work
+Parsing entity <cpu>.
+Parsing architecture <cpu_arch> of entity <cpu>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\computer.vhd" into library work
+Parsing entity <computer>.
+Parsing architecture <computer_arch> of entity <computer>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" into library work
+Parsing entity <Vocoder>.
+Parsing architecture <Behavioral> of entity <vocoder>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Vocoder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <computer> (architecture <computer_arch>) from library <work>.
+
+Elaborating entity <cpu> (architecture <cpu_arch>) from library <work>.
+
+Elaborating entity <control_unit> (architecture <control_unit_arch>) from library <work>.
+
+Elaborating entity <data_path> (architecture <data_path_arch>) from library <work>.
+
+Elaborating entity <alu> (architecture <alu_arch>) from library <work>.
+
+Elaborating entity <memory> (architecture <memory_arch>) from library <work>.
+
+Elaborating entity <rom_32767x16_sync> (architecture <rom_32767x16_sync_arch>) from library <work>.
+
+Elaborating entity <BRAM_32733x16_sync> (architecture <BRAM_32733x16_sync_arch>) from library <work>.
+
+Elaborating entity <BRAM_SINGLE_MACRO> (architecture <bram_V>) with generics from library <unimacro>.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 718: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 730: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 745: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 765: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 221: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 394: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 286: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 296: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 370: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 783: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 438: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 468: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 501: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 525: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 940: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1006: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 559: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 560: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 581: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 595: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 597: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 619: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 633: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 635: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 656: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 670: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 672: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 813: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 822: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 839: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 848: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 866: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 875: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 892: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 901: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 918: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 927: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1189: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1220: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1223: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1224: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1225: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1226: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1227: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1236: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1248: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1271: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1290: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1319: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1329: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1330: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1341: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1961: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 2604: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 2678: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:634 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1171: Net <di_pattern[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1172: Net <dip_pattern[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 85: Net <S_port_in_01[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 86: Net <S_port_in_02[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 87: Net <S_port_in_03[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 88: Net <S_port_in_04[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 89: Net <S_port_in_05[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 90: Net <S_port_in_06[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 91: Net <S_port_in_07[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 92: Net <S_port_in_08[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 93: Net <S_port_in_09[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 94: Net <S_port_in_10[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 95: Net <S_port_in_11[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 96: Net <S_port_in_12[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 97: Net <S_port_in_13[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 98: Net <S_port_in_14[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 99: Net <S_port_in_15[15]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Vocoder>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd".
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_01> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_02> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_03> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_04> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_05> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_06> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_07> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_08> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_09> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_10> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_11> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_12> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_13> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_14> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_15> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <S_port_in_01> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_02> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_03> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_04> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_05> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_06> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_07> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_08> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_09> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_10> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_11> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_12> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_13> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_14> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_port_in_15> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <Vocoder> synthesized.
+
+Synthesizing Unit <computer>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\computer.vhd".
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\computer.vhd" line 118: Output port <port_out_16> of the instance <MEMORY_MAP> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <computer> synthesized.
+
+Synthesizing Unit <cpu>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\cpu.vhd".
+    Summary:
+	no macro.
+Unit <cpu> synthesized.
+
+Synthesizing Unit <control_unit>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd".
+    Found 7-bit register for signal <current_state>.
+    Found 128x15-bit Read Only RAM for signal <_n0969>
+    Found 64x2-bit Read Only RAM for signal <_n1544>
+WARNING:Xst:737 - Found 1-bit latch for signal <WE>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred  93 Multiplexer(s).
+Unit <control_unit> synthesized.
+
+Synthesizing Unit <data_path>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\data_path.vhd".
+    Found 16-bit register for signal <MAR_out>.
+    Found 16-bit register for signal <A_out>.
+    Found 16-bit register for signal <B_out>.
+    Found 16-bit register for signal <PC_uns>.
+    Found 16-bit register for signal <IR>.
+    Found 4-bit register for signal <CCR_Result>.
+    Found 16-bit adder for signal <PC_uns[15]_GND_18_o_add_14_OUT> created at line 1241.
+    Found 16-bit 4-to-1 multiplexer for signal <BUS1> created at line 66.
+    Found 16-bit 4-to-1 multiplexer for signal <BUS2> created at line 76.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <data_path> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd".
+    Found 17-bit adder for signal <GND_20_o_GND_20_o_add_0_OUT> created at line 31.
+    Found 17-bit subtractor for signal <GND_20_o_GND_20_o_sub_2_OUT<16:0>> created at line 34.
+    Found 17-bit subtractor for signal <GND_20_o_GND_20_o_sub_3_OUT<16:0>> created at line 37.
+    Found 16x16-bit multiplier for signal <n0061> created at line 40.
+    Found 17-bit 12-to-1 multiplexer for signal <n0056> created at line 29.
+    Found 16-bit 12-to-1 multiplexer for signal <Result> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[16]_Mux_12_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[15]_Mux_14_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[14]_Mux_16_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[13]_Mux_18_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[12]_Mux_20_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[11]_Mux_22_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[10]_Mux_24_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[9]_Mux_26_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[8]_Mux_28_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[7]_Mux_30_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[6]_Mux_32_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[5]_Mux_34_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[4]_Mux_36_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[3]_Mux_38_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[2]_Mux_40_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[1]_Mux_42_o> created at line 29.
+    Found 1-bit 9-to-1 multiplexer for signal <ALU_Sel[3]_Sum_sign[0]_Mux_44_o> created at line 29.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Sum_sign<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  17 Latch(s).
+	inferred  19 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <div_16s_16s>.
+    Related source file is "".
+    Found 16-bit subtractor for signal <a[15]_unary_minus_1_OUT> created at line 0.
+    Found 16-bit subtractor for signal <b[15]_unary_minus_3_OUT> created at line 0.
+    Found 32-bit adder for signal <n1002> created at line 0.
+    Found 32-bit adder for signal <GND_22_o_b[15]_add_5_OUT> created at line 0.
+    Found 31-bit adder for signal <n1006> created at line 0.
+    Found 31-bit adder for signal <GND_22_o_b[15]_add_7_OUT> created at line 0.
+    Found 30-bit adder for signal <n1010> created at line 0.
+    Found 30-bit adder for signal <GND_22_o_b[15]_add_9_OUT> created at line 0.
+    Found 29-bit adder for signal <n1014> created at line 0.
+    Found 29-bit adder for signal <GND_22_o_b[15]_add_11_OUT> created at line 0.
+    Found 28-bit adder for signal <n1018> created at line 0.
+    Found 28-bit adder for signal <GND_22_o_b[15]_add_13_OUT> created at line 0.
+    Found 27-bit adder for signal <n1022> created at line 0.
+    Found 27-bit adder for signal <GND_22_o_b[15]_add_15_OUT> created at line 0.
+    Found 26-bit adder for signal <n1026> created at line 0.
+    Found 26-bit adder for signal <GND_22_o_b[15]_add_17_OUT> created at line 0.
+    Found 25-bit adder for signal <n1030> created at line 0.
+    Found 25-bit adder for signal <GND_22_o_b[15]_add_19_OUT> created at line 0.
+    Found 24-bit adder for signal <n1034> created at line 0.
+    Found 24-bit adder for signal <GND_22_o_b[15]_add_21_OUT> created at line 0.
+    Found 23-bit adder for signal <n1038> created at line 0.
+    Found 23-bit adder for signal <GND_22_o_b[15]_add_23_OUT> created at line 0.
+    Found 22-bit adder for signal <n1042> created at line 0.
+    Found 22-bit adder for signal <GND_22_o_b[15]_add_25_OUT> created at line 0.
+    Found 21-bit adder for signal <n1046> created at line 0.
+    Found 21-bit adder for signal <GND_22_o_b[15]_add_27_OUT> created at line 0.
+    Found 20-bit adder for signal <n1050> created at line 0.
+    Found 20-bit adder for signal <GND_22_o_b[15]_add_29_OUT> created at line 0.
+    Found 19-bit adder for signal <n1054> created at line 0.
+    Found 19-bit adder for signal <GND_22_o_b[15]_add_31_OUT> created at line 0.
+    Found 18-bit adder for signal <n1058> created at line 0.
+    Found 18-bit adder for signal <GND_22_o_b[15]_add_33_OUT> created at line 0.
+    Found 17-bit adder for signal <n1062> created at line 0.
+    Found 17-bit adder for signal <GND_22_o_b[15]_add_35_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_22_o_BUS_0001_add_38_OUT[16:0]> created at line 0.
+    Found 32-bit comparator greater for signal <BUS_0001_INV_529_o> created at line 0
+    Found 31-bit comparator greater for signal <BUS_0002_INV_528_o> created at line 0
+    Found 30-bit comparator greater for signal <BUS_0003_INV_527_o> created at line 0
+    Found 29-bit comparator greater for signal <BUS_0004_INV_526_o> created at line 0
+    Found 28-bit comparator greater for signal <BUS_0005_INV_525_o> created at line 0
+    Found 27-bit comparator greater for signal <BUS_0006_INV_524_o> created at line 0
+    Found 26-bit comparator greater for signal <BUS_0007_INV_523_o> created at line 0
+    Found 25-bit comparator greater for signal <BUS_0008_INV_522_o> created at line 0
+    Found 24-bit comparator greater for signal <BUS_0009_INV_521_o> created at line 0
+    Found 23-bit comparator greater for signal <BUS_0010_INV_520_o> created at line 0
+    Found 22-bit comparator greater for signal <BUS_0011_INV_519_o> created at line 0
+    Found 21-bit comparator greater for signal <BUS_0012_INV_518_o> created at line 0
+    Found 20-bit comparator greater for signal <BUS_0013_INV_517_o> created at line 0
+    Found 19-bit comparator greater for signal <BUS_0014_INV_516_o> created at line 0
+    Found 18-bit comparator greater for signal <BUS_0015_INV_515_o> created at line 0
+    Found 17-bit comparator greater for signal <BUS_0016_INV_514_o> created at line 0
+    Found 16-bit comparator greater for signal <BUS_0017_INV_513_o> created at line 0
+    Summary:
+	inferred  35 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 244 Multiplexer(s).
+Unit <div_16s_16s> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\memory.vhd".
+WARNING:Xst:653 - Signal <port_out_16> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 16-bit register for signal <port_out_01>.
+    Found 16-bit register for signal <port_out_02>.
+    Found 16-bit register for signal <port_out_03>.
+    Found 16-bit register for signal <port_out_04>.
+    Found 16-bit register for signal <port_out_05>.
+    Found 16-bit register for signal <port_out_06>.
+    Found 16-bit register for signal <port_out_07>.
+    Found 16-bit register for signal <port_out_08>.
+    Found 16-bit register for signal <port_out_09>.
+    Found 16-bit register for signal <port_out_10>.
+    Found 16-bit register for signal <port_out_11>.
+    Found 16-bit register for signal <port_out_12>.
+    Found 16-bit register for signal <port_out_13>.
+    Found 16-bit register for signal <port_out_14>.
+    Found 16-bit register for signal <port_out_15>.
+    Found 16-bit register for signal <port_out_00>.
+    Found 16-bit comparator lessequal for signal <n0064> created at line 279
+    Found 16-bit comparator lessequal for signal <n0066> created at line 281
+    Found 16-bit comparator lessequal for signal <n0068> created at line 281
+    Summary:
+	inferred 256 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <memory> synthesized.
+
+Synthesizing Unit <rom_32767x16_sync>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd".
+    Found 16-bit register for signal <data_out>.
+    Found 32768x16-bit Read Only RAM for signal <ADDR[14]_GND_42_o_wide_mux_1_OUT>
+    Found 16-bit comparator lessequal for signal <n0000> created at line 63
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <rom_32767x16_sync> synthesized.
+
+Synthesizing Unit <BRAM_32733x16_sync>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\BRAM_32767x16.vhd".
+    Found 16-bit comparator lessequal for signal <n0002> created at line 110
+    Found 16-bit comparator lessequal for signal <n0004> created at line 110
+    Summary:
+	inferred   2 Comparator(s).
+Unit <BRAM_32733x16_sync> synthesized.
+
+Synthesizing Unit <BRAM_SINGLE_MACRO>.
+    Related source file is "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd".
+        BRAM_SIZE = "18Kb"
+        DEVICE = "SPARTAN6"
+        DO_REG = 0
+        INITP_00 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_01 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_02 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_03 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_04 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_05 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_06 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_07 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_08 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_09 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_00 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_01 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_02 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_03 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_04 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_05 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_06 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_07 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_08 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_09 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_10 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_11 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_12 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_13 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_14 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_15 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_16 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_17 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_18 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_19 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_20 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_21 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_22 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_23 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_24 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_25 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_26 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_27 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_28 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_29 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_30 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_31 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_32 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_33 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_34 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_35 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_36 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_37 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_38 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_39 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_40 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_41 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_42 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_43 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_44 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_45 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_46 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_47 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_48 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_49 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_50 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_51 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_52 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_53 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_54 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_55 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_56 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_57 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_58 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_59 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_60 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_61 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_62 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_63 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_64 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_65 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_66 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_67 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_68 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_69 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_70 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_71 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_72 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_73 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_74 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_75 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_76 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_77 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_78 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_79 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT = "000000000000000000000000000000000000"
+        INIT_FILE = "NONE"
+        READ_WIDTH = 16
+        SIM_MODE = "SAFE"
+        SRVAL = "000000000000000000000000000000000000"
+        WRITE_MODE = "WRITE_FIRST"
+        WRITE_WIDTH = 16
+WARNING:Xst:2935 - Signal 'di_pattern<31:16>', unconnected in block 'BRAM_SINGLE_MACRO', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'dip_pattern', unconnected in block 'BRAM_SINGLE_MACRO', is tied to its initial value (0000).
+    Summary:
+	no macro.
+Unit <BRAM_SINGLE_MACRO> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x15-bit single-port Read Only RAM                  : 1
+ 32768x16-bit single-port Read Only RAM                : 1
+ 64x2-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 74
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 4
+ 17-bit adder                                          : 7
+ 17-bit subtractor                                     : 2
+ 18-bit adder                                          : 4
+ 19-bit adder                                          : 4
+ 20-bit adder                                          : 4
+ 21-bit adder                                          : 4
+ 22-bit adder                                          : 4
+ 23-bit adder                                          : 4
+ 24-bit adder                                          : 4
+ 25-bit adder                                          : 4
+ 26-bit adder                                          : 4
+ 27-bit adder                                          : 4
+ 28-bit adder                                          : 4
+ 29-bit adder                                          : 4
+ 30-bit adder                                          : 4
+ 31-bit adder                                          : 4
+ 32-bit adder                                          : 4
+# Registers                                            : 24
+ 16-bit register                                       : 22
+ 4-bit register                                        : 1
+ 7-bit register                                        : 1
+# Latches                                              : 25
+ 1-bit latch                                           : 25
+# Comparators                                          : 40
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 6
+ 17-bit comparator greater                             : 2
+ 18-bit comparator greater                             : 2
+ 19-bit comparator greater                             : 2
+ 20-bit comparator greater                             : 2
+ 21-bit comparator greater                             : 2
+ 22-bit comparator greater                             : 2
+ 23-bit comparator greater                             : 2
+ 24-bit comparator greater                             : 2
+ 25-bit comparator greater                             : 2
+ 26-bit comparator greater                             : 2
+ 27-bit comparator greater                             : 2
+ 28-bit comparator greater                             : 2
+ 29-bit comparator greater                             : 2
+ 30-bit comparator greater                             : 2
+ 31-bit comparator greater                             : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 606
+ 1-bit 2-to-1 multiplexer                              : 545
+ 1-bit 9-to-1 multiplexer                              : 17
+ 16-bit 12-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 10
+ 16-bit 4-to-1 multiplexer                             : 2
+ 17-bit 12-to-1 multiplexer                            : 1
+ 17-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 28
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <control_unit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0969> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 15-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <current_state> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1544> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 2-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <current_state<5:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <control_unit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <data_path>.
+The following registers are absorbed into counter <PC_uns>: 1 register on signal <PC_uns>.
+Unit <data_path> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rom_32767x16_sync>.
+INFO:Xst:3230 - The RAM description <Mram_ADDR[14]_GND_42_o_wide_mux_1_OUT> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 16-bit                 |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ADDR<14:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <rom_32767x16_sync> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x15-bit single-port distributed Read Only RAM      : 1
+ 32768x16-bit single-port distributed Read Only RAM    : 1
+ 64x2-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 41
+ 16-bit adder carry in                                 : 32
+ 16-bit subtractor                                     : 4
+ 17-bit adder                                          : 3
+ 17-bit subtractor                                     : 2
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 347
+ Flip-Flops                                            : 347
+# Comparators                                          : 40
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 6
+ 17-bit comparator greater                             : 2
+ 18-bit comparator greater                             : 2
+ 19-bit comparator greater                             : 2
+ 20-bit comparator greater                             : 2
+ 21-bit comparator greater                             : 2
+ 22-bit comparator greater                             : 2
+ 23-bit comparator greater                             : 2
+ 24-bit comparator greater                             : 2
+ 25-bit comparator greater                             : 2
+ 26-bit comparator greater                             : 2
+ 27-bit comparator greater                             : 2
+ 28-bit comparator greater                             : 2
+ 29-bit comparator greater                             : 2
+ 30-bit comparator greater                             : 2
+ 31-bit comparator greater                             : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 620
+ 1-bit 2-to-1 multiplexer                              : 545
+ 1-bit 4-to-1 multiplexer                              : 16
+ 1-bit 9-to-1 multiplexer                              : 17
+ 16-bit 12-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 9
+ 16-bit 4-to-1 multiplexer                             : 1
+ 17-bit 12-to-1 multiplexer                            : 1
+ 17-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 28
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    next_state_0 in unit <control_unit>
+    next_state_1 in unit <control_unit>
+
+
+Optimizing unit <Vocoder> ...
+
+Optimizing unit <memory> ...
+
+Optimizing unit <rom_32767x16_sync> ...
+
+Optimizing unit <data_path> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <control_unit> ...
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_0> of sequential type is unconnected in block <Vocoder>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Vocoder, actual ratio is 28.
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_0 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_1 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_10 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_11 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_12 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_13 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_14 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_15 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_2 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_3 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_4 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_5 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_6 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_7 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_8 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_9 has been replicated 4 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_0 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_1 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_10 has been replicated 1 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_11 has been replicated 1 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_12 has been replicated 1 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_13 has been replicated 1 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_14 has been replicated 1 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_15 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_2 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_3 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_4 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_5 has been replicated 1 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_6 has been replicated 2 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_7 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_8 has been replicated 3 time(s)
+FlipFlop COMPUTER_mAp/CPU_MAP/DP/B_out_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 197
+ Flip-Flops                                            : 197
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Vocoder.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2549
+#      GND                         : 1
+#      INV                         : 91
+#      LUT1                        : 2
+#      LUT2                        : 107
+#      LUT3                        : 209
+#      LUT4                        : 361
+#      LUT5                        : 289
+#      LUT6                        : 583
+#      MUXCY                       : 513
+#      MUXF7                       : 18
+#      VCC                         : 1
+#      XORCY                       : 374
+# FlipFlops/Latches                : 222
+#      FDC                         : 7
+#      FDCE                        : 174
+#      FDE                         : 16
+#      LD                          : 20
+#      LDC                         : 5
+# RAMS                             : 1
+#      RAMB16BWER                  : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 17
+#      OBUF                        : 16
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             222  out of  11440     1%  
+ Number of Slice LUTs:                 1642  out of   5720    28%  
+    Number used as Logic:              1642  out of   5720    28%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1765
+   Number with an unused Flip Flop:    1543  out of   1765    87%  
+   Number with an unused LUT:           123  out of   1765     6%  
+   Number of fully used LUT-FF pairs:    99  out of   1765     5%  
+   Number of unique control sets:        13
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    102    33%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                 | Clock buffer(FF name)                                                                  | Load  |
+-----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
+CLK                                                                                                                          | BUFGP                                                                                  | 198   |
+COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o1:O)| NONE(*)(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/Sum_sign_0)                                    | 17    |
+COMPUTER_mAp/CPU_MAP/CU/_n0969<14>(COMPUTER_mAp/CPU_MAP/CU_Mram__n0969141:O)                                                 | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/WE)                                                    | 1     |
+COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o(COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o:O)                           | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/next_state_2)                                          | 5     |
+COMPUTER_mAp/CPU_MAP/CU/next_state_0_G(COMPUTER_mAp/CPU_MAP/CU/next_state_0_G:O)                                             | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/next_state_0)                                          | 2     |
+S_port_in_15<1>                                                                                                              | NONE(COMPUTER_mAp/MEMORY_MAP/RAM/BRAM_SINGLE_MACRO_inst/ramb_st.ramb18_sin_st.ram18_st)| 1     |
+-----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 50.455ns (Maximum Frequency: 19.819MHz)
+   Minimum input arrival time before clock: 5.237ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 50.455ns (frequency: 19.819MHz)
+  Total number of paths / destination ports: 372229730363817100000000 / 407
+-------------------------------------------------------------------------
+Delay:               50.455ns (Levels of Logic = 127)
+  Source:            COMPUTER_mAp/CPU_MAP/DP/B_out_5 (FF)
+  Destination:       COMPUTER_mAp/CPU_MAP/DP/CCR_Result_2 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: COMPUTER_mAp/CPU_MAP/DP/B_out_5 to COMPUTER_mAp/CPU_MAP/DP/CCR_Result_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.447   1.071  COMPUTER_mAp/CPU_MAP/DP/B_out_5 (COMPUTER_mAp/CPU_MAP/DP/B_out_5)
+     INV:I->O              1   0.206   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_lut<5>_INV_0 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_lut<5>)
+     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<7> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<8> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<9> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<9>)
+     XORCY:CI->O           3   0.180   0.755  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_xor<10> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/b[15]_unary_minus_3_OUT<10>)
+     LUT6:I4->O            1   0.203   0.580  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0_SW0 (N335)
+     LUT6:I5->O            1   0.205   0.684  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0 (N258)
+     LUT6:I4->O            7   0.203   0.878  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_821_o11 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_821_o)
+     LUT6:I4->O            3   0.203   0.879  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_b[15]_add_11_OUT_Madd_Madd_lut<14>1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_b[15]_add_11_OUT_Madd_Madd_lut<14>)
+     LUT4:I1->O            4   0.205   0.931  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_939_o111 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_940_o)
+     LUT5:I1->O            1   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_lut<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<3>)
+     MUXCY:CI->O          11   0.213   0.883  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<4>)
+     LUT5:I4->O            8   0.205   1.031  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_1000_o1131 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_997_o)
+     LUT4:I1->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_lut<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<3>)
+     MUXCY:CI->O          15   0.213   0.982  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<4>)
+     LUT6:I5->O            6   0.205   0.973  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_1049_o131 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1052_o)
+     LUT4:I1->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_lut<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<3>)
+     MUXCY:CI->O          25   0.213   1.193  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<4>)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1106_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1156_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<4>)
+     MUXCY:CI->O          25   0.213   1.193  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<5>)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1157_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1205_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<4>)
+     MUXCY:CI->O          30   0.213   1.264  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<5>)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1206_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1252_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<4>)
+     MUXCY:CI->O          31   0.213   1.278  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<5>)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1253_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1297_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<4>)
+     MUXCY:CI->O          36   0.213   1.349  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<5>)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1298_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1340_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<5>)
+     MUXCY:CI->O          37   0.213   1.363  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<6>)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1341_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1381_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<5>)
+     MUXCY:CI->O          43   0.213   1.449  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<6>)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1382_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1420_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<5>)
+     MUXCY:CI->O          45   0.213   1.477  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<6>)
+     LUT5:I4->O            5   0.205   0.962  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1421_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1457_o_bdd0)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<6>)
+     MUXCY:CI->O          45   0.213   1.477  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<7> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<7>)
+     LUT5:I4->O            2   0.205   0.864  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1458_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1458_o)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<6>)
+     MUXCY:CI->O          18   0.213   1.050  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<7> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<7>)
+     LUT5:I4->O            2   0.205   0.864  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/n0995<1>1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/n0995<1>)
+     LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<6>)
+     MUXCY:CI->O           3   0.213   0.651  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<7> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<7>)
+     LUT1:I0->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0>_rt (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0>_rt)
+     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<1>)
+     XORCY:CI->O           2   0.180   0.617  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_xor<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/GND_22_o_BUS_0001_add_38_OUT[16:0]<2>)
+     LUT4:I3->O            1   0.205   0.580  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_o101 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4_OUT<2>)
+     LUT6:I5->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_67 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_67)
+     MUXF7:I1->O           1   0.140   0.808  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_5_f7_6 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_5_f77)
+     LUT6:I3->O            1   0.205   0.808  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/NZVC<2><15>9_SW0_SW0 (N367)
+     LUT6:I3->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/NZVC<2><15>11 (COMPUTER_mAp/CPU_MAP/DP/NZVC_sig<2>)
+     FDCE:D                    0.102          COMPUTER_mAp/CPU_MAP/DP/CCR_Result_2
+    ----------------------------------------
+    Total                     50.455ns (14.621ns logic, 35.834ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 863 / 335
+-------------------------------------------------------------------------
+Offset:              5.237ns (Levels of Logic = 20)
+  Source:            Par_I<0> (PAD)
+  Destination:       COMPUTER_mAp/CPU_MAP/DP/PC_uns_15 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: Par_I<0> to COMPUTER_mAp/CPU_MAP/DP/PC_uns_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.898  Par_I_0_IBUF (Par_I_0_IBUF)
+     LUT6:I2->O            2   0.203   0.961  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS2110_SW1 (N51)
+     LUT5:I0->O            1   0.203   0.827  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS219_SW1 (N288)
+     LUT6:I2->O            1   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_lut<0> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<0> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<1> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<2> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<3> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<4> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<5> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<6> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<7> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<8> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<9> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<10> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<11> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<12> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<13> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<14> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_xor<15> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns15)
+     FDCE:D                    0.102          COMPUTER_mAp/CPU_MAP/DP/PC_uns_15
+    ----------------------------------------
+    Total                      5.237ns (2.551ns logic, 2.686ns route)
+                                       (48.7% logic, 51.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            COMPUTER_mAp/MEMORY_MAP/port_out_00_15 (FF)
+  Destination:       Par_O<15> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: COMPUTER_mAp/MEMORY_MAP/port_out_00_15 to Par_O<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.447   0.579  COMPUTER_mAp/MEMORY_MAP/port_out_00_15 (COMPUTER_mAp/MEMORY_MAP/port_out_00_15)
+     OBUF:I->O                 2.571          Par_O_15_OBUF (Par_O<15>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+------------------------------------------------------------+---------+---------+---------+---------+
+                                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------------------+---------+---------+---------+---------+
+CLK                                                         |   50.455|         |         |         |
+COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o             |         |    1.179|         |         |
+COMPUTER_mAp/CPU_MAP/CU/_n0969<14>                          |         |    3.631|         |         |
+COMPUTER_mAp/CPU_MAP/CU/next_state_0_G                      |         |    1.179|         |         |
+COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o|         |    6.314|         |         |
+------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    7.989|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/_n0969<14>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.181|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/next_state_0_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |   10.236|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |   49.532|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 19.27 secs
+ 
+--> 
+
+Total memory usage is 4938168 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  356 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
+
