@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-GJ3I8B2::  Fri May 22 11:53:02 2020
+DESKTOP-GJ3I8B2::  Fri May 22 18:31:30 2020
 
 par -w -intstyle ise -ol high -mt off Vocoder_map.ncd Vocoder.ncd Vocoder.pcf 
 
@@ -31,25 +31,25 @@ Slice Logic Utilization:
     Number used as Latches:                     25
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      1,418 out of   5,720   24%
+  Number of Slice LUTs:                      1,412 out of   5,720   24%
     Number used as logic:                    1,411 out of   5,720   24%
       Number using O6 output only:           1,098
       Number using O5 output only:               4
       Number using O5 and O6:                  309
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      7
+    Number used exclusively as route-thrus:      1
+      Number with same-slice register load:      1
       Number with same-slice carry load:         0
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   518 out of   1,430   36%
+  Number of occupied Slices:                   532 out of   1,430   37%
   Number of MUXCYs used:                       624 out of   2,860   21%
-  Number of LUT Flip Flop pairs used:        1,488
-    Number with an unused Flip Flop:         1,273 out of   1,488   85%
-    Number with an unused LUT:                  70 out of   1,488    4%
-    Number of fully used LUT-FF pairs:         145 out of   1,488    9%
+  Number of LUT Flip Flop pairs used:        1,503
+    Number with an unused Flip Flop:         1,281 out of   1,503   85%
+    Number with an unused LUT:                  91 out of   1,503    6%
+    Number of fully used LUT-FF pairs:         131 out of   1,503    8%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -60,13 +60,17 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        34 out of     102   33%
+  Number of bonded IOBs:                        35 out of     102   34%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         1 out of      32    3%
   Number of RAMB8BWERs:                          0 out of      64    0%
-  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
-  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
   Number of BUFG/BUFGMUXs:                       1 out of      16    6%
     Number used as BUFGs:                        1
     Number used as BUFGMUX:                      0
@@ -82,7 +86,7 @@ Specific Feature Utilization:
   Number of ICAPs:                               0 out of       1    0%
   Number of MCBs:                                0 out of       2    0%
   Number of PCILOGICSEs:                         0 out of       2    0%
-  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
   Number of PMVs:                                0 out of       1    0%
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
@@ -91,19 +95,19 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
 
 Starting Router
 
 
-Phase  1  : 7876 unrouted;      REAL time: 3 secs 
+Phase  1  : 7912 unrouted;      REAL time: 3 secs 
 
-Phase  2  : 7259 unrouted;      REAL time: 3 secs 
+Phase  2  : 7286 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 3758 unrouted;      REAL time: 5 secs 
+Phase  3  : 3581 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 3758 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 3581 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
 Updating file: Vocoder.ncd with current fully routed design.
 
@@ -139,8 +143,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net CLK | SETUP       |         N/A|    51.966ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.498ns|            |       0|           0
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|    52.429ns|     N/A|           0
+                                            | HOLD        |     0.499ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

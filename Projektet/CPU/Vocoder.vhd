@@ -19,6 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+Library UNISIM;
+use UNISIM.vcomponents.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,8 +33,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Vocoder is
     Port ( 
-	 CLK           	: in   std_logic; -- Clock
+	 CLK_in           	: in   std_logic; -- Clock
 	 RST_ext          	: in   std_logic; -- Reset
+	 ADDA_CLK : out std_logic; --DAC/ADC system clock
 	 Par_I : in  STD_LOGIC_VECTOR (15 downto 0);
     Par_O : out  STD_LOGIC_VECTOR (15 downto 0)
 	 );
@@ -80,74 +83,101 @@ component computer is -- Portdefinition of Memory (Module)
          port_out_15    : out std_logic_vector (15 downto 0)
 			);
 	end component;
-			
 
-         signal S_port_in_01     :  std_logic_vector (15 downto 0);
-         signal S_port_in_02     :  std_logic_vector (15 downto 0);
-         signal S_port_in_03     :  std_logic_vector (15 downto 0);
-         signal S_port_in_04     :  std_logic_vector (15 downto 0);
-         signal S_port_in_05     :  std_logic_vector (15 downto 0);
-         signal S_port_in_06     :  std_logic_vector (15 downto 0);               
-         signal S_port_in_07     :  std_logic_vector (15 downto 0);
-         signal S_port_in_08     :  std_logic_vector (15 downto 0);
-         signal S_port_in_09     :  std_logic_vector (15 downto 0);
-         signal S_port_in_10     :  std_logic_vector (15 downto 0);
-         signal S_port_in_11     :  std_logic_vector (15 downto 0);
-         signal S_port_in_12     :  std_logic_vector (15 downto 0);
-         signal S_port_in_13     :  std_logic_vector (15 downto 0);
-         signal S_port_in_14     :  std_logic_vector (15 downto 0);
-         signal S_port_in_15     :  std_logic_vector (15 downto 0);                                                                   
-         -- 16x16bit output ports:
-         signal S_port_out_01    : std_logic_vector (15 downto 0);
-         signal S_port_out_02    : std_logic_vector (15 downto 0);
-         signal S_port_out_03    : std_logic_vector (15 downto 0);
-         signal S_port_out_04    : std_logic_vector (15 downto 0);
-         signal S_port_out_05    : std_logic_vector (15 downto 0);
-         signal S_port_out_06    : std_logic_vector (15 downto 0);
-         signal S_port_out_07    : std_logic_vector (15 downto 0);
-         signal S_port_out_08    : std_logic_vector (15 downto 0);
-         signal S_port_out_09    : std_logic_vector (15 downto 0);
-         signal S_port_out_10    : std_logic_vector (15 downto 0);
-         signal S_port_out_11    : std_logic_vector (15 downto 0);
-         signal S_port_out_12    : std_logic_vector (15 downto 0);
-         signal S_port_out_13    : std_logic_vector (15 downto 0);
-         signal S_port_out_14    : std_logic_vector (15 downto 0);
-         signal S_port_out_15    : std_logic_vector (15 downto 0);
+component BUFG
+port(I: in STD_LOGIC; O: out STD_LOGIC );
+end component;			                                                                
+component BUFIO2FB
+port(I: in STD_LOGIC; O: out STD_LOGIC );
+end component;
+
+			
+			--PLL stuff
+			signal CLK : std_logic;
+			signal CLK_OUT : std_logic;
+			signal CLK_FB_in : std_logic;
+			signal CLK_FB_out : std_logic;
 begin
+
+clock: BUFG port map (I => CLK_OUT, O => CLK); -- Clock line
+
+Feedback_Clock: BUFIO2FB port map (I => CLK_FB_out, O => CLK_FB_in); -- Feedback line
 
 COMPUTER_mAp : computer	port map (CLK => CLK, RST => RST_ext,
 				  port_in_00 => Par_I,
-				  port_in_01 => S_port_in_01,
-				  port_in_02 => S_port_in_02,
-				  port_in_03 => S_port_in_03,
-				  port_in_04 => S_port_in_04,
-				  port_in_05 => S_port_in_05,
-				  port_in_06 => S_port_in_06,
-				  port_in_07 => S_port_in_07,
-				  port_in_08 => S_port_in_08,
-				  port_in_09 => S_port_in_09,
-				  port_in_10 => S_port_in_10,
-				  port_in_11 => S_port_in_11,
-				  port_in_12 => S_port_in_12,
-				  port_in_13 => S_port_in_13,
-				  port_in_14 => S_port_in_14,
-				  port_in_15 => S_port_in_15,
+				  port_in_01 => x"0000",
+				  port_in_02 => x"0000",
+				  port_in_03 => x"0000",
+				  port_in_04 => x"0000",
+				  port_in_05 => x"0000",
+				  port_in_06 => x"0000",
+				  port_in_07 => x"0000",
+				  port_in_08 => x"0000",
+				  port_in_09 => x"0000",
+				  port_in_10 => x"0000",
+				  port_in_11 => x"0000",
+				  port_in_12 => x"0000",
+				  port_in_13 => x"0000",
+				  port_in_14 => x"0000",
+				  port_in_15 => x"0000",
 				  port_out_00 => Par_O,
-				  port_out_01 => S_port_out_01,
-				  port_out_02 => S_port_out_02,
-				  port_out_03 => S_port_out_03,
-				  port_out_04 => S_port_out_04,
-				  port_out_05 => S_port_out_05,
-				  port_out_06 => S_port_out_06,
-				  port_out_07 => S_port_out_07,
-				  port_out_08 => S_port_out_08,
-				  port_out_09 => S_port_out_09,
-				  port_out_10 => S_port_out_10,
-				  port_out_11 => S_port_out_11,
-				  port_out_12 => S_port_out_12,
-				  port_out_13 => S_port_out_13,
-				  port_out_14 => S_port_out_14,
-				  port_out_15 => S_port_out_15);
+				  port_out_01 => open,
+				  port_out_02 => open,
+				  port_out_03 => open,
+				  port_out_04 => open,
+				  port_out_05 => open,
+				  port_out_06 => open,
+				  port_out_07 => open,
+				  port_out_08 => open,
+				  port_out_09 => open,
+				  port_out_10 => open,
+				  port_out_11 => open,
+				  port_out_12 => open,
+				  port_out_13 => open,
+				  port_out_14 => open,
+				  port_out_15 => open);
+
+
+--PLL
+
+PLL_BASE_inst : PLL_BASE
+   generic map (
+      BANDWIDTH => "OPTIMIZED",             -- "HIGH", "LOW" or "OPTIMIZED" 
+      CLKFBOUT_MULT => 24,                   -- Multiply value for all CLKOUT clock outputs (1-64) -- does not work at low frequencies that is the reason for 24 multiplier 
+      CLKFBOUT_PHASE => 0.0,                -- Phase offset in degrees of the clock feedback output
+                                            -- (0.0-360.0).
+      CLKIN_PERIOD => 31.25,  --32MHz       -- Input clock period in ns to ps resolution (i.e. 33.333 is 30
+                                            -- MHz).
+      -- CLKOUT0_DIVIDE - CLKOUT5_DIVIDE: Divide amount for CLKOUT# clock output (1-128)
+      CLKOUT0_DIVIDE => 48, --32 MHz * 24 / 48 = 16 MHz
+      CLKOUT1_DIVIDE => 34, --32 MHz * 24 / 34 = 22,588 MHz -- 22,558 MHz / 512 = 44,118 kHz
+      -- CLKOUT0_DUTY_CYCLE - CLKOUT5_DUTY_CYCLE: Duty cycle for CLKOUT# clock output (0.01-0.99).
+      CLKOUT0_DUTY_CYCLE => 0.5,
+      CLKOUT1_DUTY_CYCLE => 0.5,
+      -- CLKOUT0_PHASE - CLKOUT5_PHASE: Output phase relationship for CLKOUT# clock output (-360.0-360.0).
+      CLKOUT0_PHASE => 0.0,
+      CLKOUT1_PHASE => 0.0,
+      CLK_FEEDBACK => "CLKFBOUT",           -- Clock source to drive CLKFBIN ("CLKFBOUT" or "CLKOUT0")
+      COMPENSATION => "SYSTEM_SYNCHRONOUS", -- "SYSTEM_SYNCHRONOUS", "SOURCE_SYNCHRONOUS", "EXTERNAL" 
+      DIVCLK_DIVIDE => 1,                   -- Division value for all output clocks (1-52)
+      REF_JITTER => 0.1,                    -- Reference Clock Jitter in UI (0.000-0.999).
+      RESET_ON_LOSS_OF_LOCK => FALSE        -- Must be set to FALSE
+   )
+   port map (
+      CLKFBOUT => CLK_FB_OUT, -- 1-bit output: PLL_BASE feedback output
+      -- CLKOUT0 - CLKOUT5: 1-bit (each) output: Clock outputs
+      CLKOUT0 => CLK_OUT, --CPU clock
+      CLKOUT1 => ADDA_CLK, --DAC/ADC system clock
+      CLKOUT2 => open,
+      CLKOUT3 => open,
+      CLKOUT4 => open,
+      CLKOUT5 => open,
+      LOCKED => open,     -- 1-bit output: PLL_BASE lock status output
+		--clock input and feedback
+      CLKFBIN => CLK_FB_in,   -- 1-bit input: Feedback clock input
+      CLKIN => CLK_IN,       -- 1-bit input: Clock input
+      RST => RST_ext            -- 1-bit input: Reset input
+   );
 
 end Behavioral;
 

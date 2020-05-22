@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.08 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Vocoder.prj
 
@@ -138,6 +138,8 @@ Parsing architecture <Behavioral> of entity <vocoder>.
 =========================================================================
 
 Elaborating entity <Vocoder> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:89 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 87: <bufg> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 90: <bufio2fb> remains a black-box since it has no binding entity.
 
 Elaborating entity <computer> (architecture <computer_arch>) from library <work>.
 
@@ -213,21 +215,6 @@ WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGL
 WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 2678: Comparison between arrays of unequal length always returns FALSE.
 WARNING:HDLCompiler:634 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1171: Net <di_pattern[31]> does not have a driver.
 WARNING:HDLCompiler:634 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1172: Net <dip_pattern[3]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 85: Net <S_port_in_01[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 86: Net <S_port_in_02[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 87: Net <S_port_in_03[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 88: Net <S_port_in_04[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 89: Net <S_port_in_05[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 90: Net <S_port_in_06[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 91: Net <S_port_in_07[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 92: Net <S_port_in_08[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 93: Net <S_port_in_09[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 94: Net <S_port_in_10[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 95: Net <S_port_in_11[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 96: Net <S_port_in_12[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 97: Net <S_port_in_13[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 98: Net <S_port_in_14[15]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 99: Net <S_port_in_15[15]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -235,36 +222,21 @@ WARNING:HDLCompiler:634 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocode
 
 Synthesizing Unit <Vocoder>.
     Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd".
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_01> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_02> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_03> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_04> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_05> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_06> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_07> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_08> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_09> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_10> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_11> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_12> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_13> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_14> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 118: Output port <port_out_15> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <S_port_in_01> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_02> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_03> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_04> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_05> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_06> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_07> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_08> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_09> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_10> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_11> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_12> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_13> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_14> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <S_port_in_15> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_01> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_02> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_03> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_04> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_05> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_06> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_07> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_08> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_09> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_10> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_11> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_12> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_13> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_14> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_15> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Vocoder> synthesized.
@@ -286,7 +258,7 @@ Synthesizing Unit <control_unit>.
     Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd".
     Found 7-bit register for signal <current_state>.
     Found 128x15-bit Read Only RAM for signal <_n0969>
-    Found 64x2-bit Read Only RAM for signal <_n1544>
+    Found 64x2-bit Read Only RAM for signal <_n1289>
 WARNING:Xst:737 - Found 1-bit latch for signal <WE>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -310,7 +282,7 @@ Synthesizing Unit <data_path>.
     Found 16-bit register for signal <PC_uns>.
     Found 16-bit register for signal <IR>.
     Found 4-bit register for signal <CCR_Result>.
-    Found 16-bit adder for signal <PC_uns[15]_GND_18_o_add_14_OUT> created at line 1241.
+    Found 16-bit adder for signal <PC_uns[15]_GND_19_o_add_14_OUT> created at line 1241.
     Found 16-bit 4-to-1 multiplexer for signal <BUS1> created at line 66.
     Found 16-bit 4-to-1 multiplexer for signal <BUS2> created at line 76.
     Summary:
@@ -321,9 +293,9 @@ Unit <data_path> synthesized.
 
 Synthesizing Unit <alu>.
     Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\ALU.vhd".
-    Found 17-bit adder for signal <GND_20_o_GND_20_o_add_0_OUT> created at line 31.
-    Found 17-bit subtractor for signal <GND_20_o_GND_20_o_sub_2_OUT<16:0>> created at line 34.
-    Found 17-bit subtractor for signal <GND_20_o_GND_20_o_sub_3_OUT<16:0>> created at line 37.
+    Found 17-bit adder for signal <GND_21_o_GND_21_o_add_0_OUT> created at line 31.
+    Found 17-bit subtractor for signal <GND_21_o_GND_21_o_sub_2_OUT<16:0>> created at line 34.
+    Found 17-bit subtractor for signal <GND_21_o_GND_21_o_sub_3_OUT<16:0>> created at line 37.
     Found 16x16-bit multiplier for signal <n0061> created at line 40.
     Found 17-bit 12-to-1 multiplexer for signal <n0056> created at line 29.
     Found 16-bit 12-to-1 multiplexer for signal <Result> created at line 29.
@@ -373,38 +345,38 @@ Synthesizing Unit <div_16s_16s>.
     Found 16-bit subtractor for signal <a[15]_unary_minus_1_OUT> created at line 0.
     Found 16-bit subtractor for signal <b[15]_unary_minus_3_OUT> created at line 0.
     Found 32-bit adder for signal <n1002> created at line 0.
-    Found 32-bit adder for signal <GND_22_o_b[15]_add_5_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_23_o_b[15]_add_5_OUT> created at line 0.
     Found 31-bit adder for signal <n1006> created at line 0.
-    Found 31-bit adder for signal <GND_22_o_b[15]_add_7_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_23_o_b[15]_add_7_OUT> created at line 0.
     Found 30-bit adder for signal <n1010> created at line 0.
-    Found 30-bit adder for signal <GND_22_o_b[15]_add_9_OUT> created at line 0.
+    Found 30-bit adder for signal <GND_23_o_b[15]_add_9_OUT> created at line 0.
     Found 29-bit adder for signal <n1014> created at line 0.
-    Found 29-bit adder for signal <GND_22_o_b[15]_add_11_OUT> created at line 0.
+    Found 29-bit adder for signal <GND_23_o_b[15]_add_11_OUT> created at line 0.
     Found 28-bit adder for signal <n1018> created at line 0.
-    Found 28-bit adder for signal <GND_22_o_b[15]_add_13_OUT> created at line 0.
+    Found 28-bit adder for signal <GND_23_o_b[15]_add_13_OUT> created at line 0.
     Found 27-bit adder for signal <n1022> created at line 0.
-    Found 27-bit adder for signal <GND_22_o_b[15]_add_15_OUT> created at line 0.
+    Found 27-bit adder for signal <GND_23_o_b[15]_add_15_OUT> created at line 0.
     Found 26-bit adder for signal <n1026> created at line 0.
-    Found 26-bit adder for signal <GND_22_o_b[15]_add_17_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_23_o_b[15]_add_17_OUT> created at line 0.
     Found 25-bit adder for signal <n1030> created at line 0.
-    Found 25-bit adder for signal <GND_22_o_b[15]_add_19_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_23_o_b[15]_add_19_OUT> created at line 0.
     Found 24-bit adder for signal <n1034> created at line 0.
-    Found 24-bit adder for signal <GND_22_o_b[15]_add_21_OUT> created at line 0.
+    Found 24-bit adder for signal <GND_23_o_b[15]_add_21_OUT> created at line 0.
     Found 23-bit adder for signal <n1038> created at line 0.
-    Found 23-bit adder for signal <GND_22_o_b[15]_add_23_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_23_o_b[15]_add_23_OUT> created at line 0.
     Found 22-bit adder for signal <n1042> created at line 0.
-    Found 22-bit adder for signal <GND_22_o_b[15]_add_25_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_23_o_b[15]_add_25_OUT> created at line 0.
     Found 21-bit adder for signal <n1046> created at line 0.
-    Found 21-bit adder for signal <GND_22_o_b[15]_add_27_OUT> created at line 0.
+    Found 21-bit adder for signal <GND_23_o_b[15]_add_27_OUT> created at line 0.
     Found 20-bit adder for signal <n1050> created at line 0.
-    Found 20-bit adder for signal <GND_22_o_b[15]_add_29_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_23_o_b[15]_add_29_OUT> created at line 0.
     Found 19-bit adder for signal <n1054> created at line 0.
-    Found 19-bit adder for signal <GND_22_o_b[15]_add_31_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_23_o_b[15]_add_31_OUT> created at line 0.
     Found 18-bit adder for signal <n1058> created at line 0.
-    Found 18-bit adder for signal <GND_22_o_b[15]_add_33_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_23_o_b[15]_add_33_OUT> created at line 0.
     Found 17-bit adder for signal <n1062> created at line 0.
-    Found 17-bit adder for signal <GND_22_o_b[15]_add_35_OUT> created at line 0.
-    Found 17-bit adder for signal <GND_22_o_BUS_0001_add_38_OUT[16:0]> created at line 0.
+    Found 17-bit adder for signal <GND_23_o_b[15]_add_35_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_23_o_BUS_0001_add_38_OUT[16:0]> created at line 0.
     Found 32-bit comparator greater for signal <BUS_0001_INV_529_o> created at line 0
     Found 31-bit comparator greater for signal <BUS_0002_INV_528_o> created at line 0
     Found 30-bit comparator greater for signal <BUS_0003_INV_527_o> created at line 0
@@ -459,7 +431,7 @@ Unit <memory> synthesized.
 Synthesizing Unit <rom_32767x16_sync>.
     Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\rom_32733x16_sync.vhd".
     Found 16-bit register for signal <data_out>.
-    Found 32768x16-bit Read Only RAM for signal <ADDR[14]_GND_42_o_wide_mux_1_OUT>
+    Found 32768x16-bit Read Only RAM for signal <ADDR[14]_GND_43_o_wide_mux_1_OUT>
     Found 16-bit comparator lessequal for signal <n0000> created at line 63
     Summary:
 	inferred   1 RAM(s).
@@ -723,7 +695,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0969> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1544> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1289> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -741,7 +713,7 @@ The following registers are absorbed into counter <PC_uns>: 1 register on signal
 Unit <data_path> synthesized (advanced).
 
 Synthesizing (advanced) Unit <rom_32767x16_sync>.
-INFO:Xst:3230 - The RAM description <Mram_ADDR[14]_GND_42_o_wide_mux_1_OUT> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
+INFO:Xst:3230 - The RAM description <Mram_ADDR[14]_GND_43_o_wide_mux_1_OUT> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -810,6 +782,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:1901 - Instance PLL_BASE_inst in unit PLL_BASE_inst of type PLL_BASE has been replaced by PLL_ADV
 WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
    incompatible with the Spartan6 architecture. The two primary causes of this is
    either a register or latch described with both an asynchronous set and
@@ -1177,12 +1150,15 @@ Primitive and Black Box Usage:
 # RAMS                             : 1
 #      RAMB16BWER                  : 1
 # Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 33
-#      IBUF                        : 17
-#      OBUF                        : 16
+#      BUFG                        : 1
+# IO Buffers                       : 35
+#      IBUF                        : 18
+#      OBUF                        : 17
 # DSPs                             : 1
 #      DSP48A1                     : 1
+# Others                           : 2
+#      BUFIO2FB                    : 1
+#      PLL_ADV                     : 1
 
 Device utilization summary:
 ---------------------------
@@ -1203,14 +1179,15 @@ Slice Logic Distribution:
    Number of unique control sets:        13
 
 IO Utilization: 
- Number of IOs:                          34
- Number of bonded IOBs:                  34  out of    102    33%  
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    102    34%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
     Number using Block RAM only:          1
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
  Number of DSP48A1s:                      1  out of     16     6%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1233,12 +1210,12 @@ Clock Information:
 -----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                 | Clock buffer(FF name)                                                                  | Load  |
 -----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
-CLK                                                                                                                          | BUFGP                                                                                  | 198   |
-COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o1:O)| NONE(*)(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/Sum_sign_0)                                    | 17    |
+PLL_BASE_inst/CLKOUT0                                                                                                        | BUFG                                                                                   | 198   |
+COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_26_o_Mux_15_o(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_26_o_Mux_15_o1:O)| NONE(*)(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/Sum_sign_0)                                    | 17    |
 COMPUTER_mAp/CPU_MAP/CU/_n0969<14>(COMPUTER_mAp/CPU_MAP/CU_Mram__n0969141:O)                                                 | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/WE)                                                    | 1     |
-COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o(COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o:O)                           | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/next_state_2)                                          | 5     |
+COMPUTER_mAp/CPU_MAP/CU/GND_10_o_GND_10_o_OR_91_o(COMPUTER_mAp/CPU_MAP/CU/GND_10_o_GND_10_o_OR_91_o:O)                       | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/next_state_2)                                          | 5     |
 COMPUTER_mAp/CPU_MAP/CU/next_state_0_G(COMPUTER_mAp/CPU_MAP/CU/next_state_0_G:O)                                             | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/next_state_0)                                          | 2     |
-S_port_in_15<1>                                                                                                              | NONE(COMPUTER_mAp/MEMORY_MAP/RAM/BRAM_SINGLE_MACRO_inst/ramb_st.ramb18_sin_st.ram18_st)| 1     |
+N1                                                                                                                           | NONE(COMPUTER_mAp/MEMORY_MAP/RAM/BRAM_SINGLE_MACRO_inst/ramb_st.ramb18_sin_st.ram18_st)| 1     |
 -----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
 (*) These 4 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -1263,15 +1240,15 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'CLK'
+Timing constraint: Default period analysis for Clock 'PLL_BASE_inst/CLKOUT0'
   Clock period: 50.455ns (frequency: 19.819MHz)
-  Total number of paths / destination ports: 372229730363817100000000 / 407
+  Total number of paths / destination ports: 372229730363816970000000 / 407
 -------------------------------------------------------------------------
 Delay:               50.455ns (Levels of Logic = 127)
   Source:            COMPUTER_mAp/CPU_MAP/DP/B_out_5 (FF)
   Destination:       COMPUTER_mAp/CPU_MAP/DP/CCR_Result_2 (FF)
-  Source Clock:      CLK rising
-  Destination Clock: CLK rising
+  Source Clock:      PLL_BASE_inst/CLKOUT0 rising
+  Destination Clock: PLL_BASE_inst/CLKOUT0 rising
 
   Data Path: COMPUTER_mAp/CPU_MAP/DP/B_out_5 to COMPUTER_mAp/CPU_MAP/DP/CCR_Result_2
                                 Gate     Net
@@ -1287,27 +1264,27 @@ Delay:               50.455ns (Levels of Logic = 127)
      XORCY:CI->O           3   0.180   0.755  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_xor<10> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/b[15]_unary_minus_3_OUT<10>)
      LUT6:I4->O            1   0.203   0.580  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0_SW0 (N335)
      LUT6:I5->O            1   0.205   0.684  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0 (N258)
-     LUT6:I4->O            7   0.203   0.878  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_821_o11 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_821_o)
-     LUT6:I4->O            3   0.203   0.879  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_b[15]_add_11_OUT_Madd_Madd_lut<14>1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_b[15]_add_11_OUT_Madd_Madd_lut<14>)
-     LUT4:I1->O            4   0.205   0.931  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_939_o111 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_940_o)
+     LUT6:I4->O            7   0.203   0.878  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_23_o_MUX_821_o11 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_821_o)
+     LUT6:I4->O            3   0.203   0.879  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_b[15]_add_11_OUT_Madd_Madd_lut<14>1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_b[15]_add_11_OUT_Madd_Madd_lut<14>)
+     LUT4:I1->O            4   0.205   0.931  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_23_o_MUX_939_o111 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_940_o)
      LUT5:I1->O            1   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_lut<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_lut<1>)
      MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<3>)
      MUXCY:CI->O          11   0.213   0.883  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0005_INV_525_o_cy<4>)
-     LUT5:I4->O            8   0.205   1.031  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_1000_o1131 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_997_o)
+     LUT5:I4->O            8   0.205   1.031  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_23_o_MUX_1000_o1131 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_997_o)
      LUT4:I1->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_lut<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_lut<1>)
      MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<3>)
      MUXCY:CI->O          15   0.213   0.982  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0006_INV_524_o_cy<4>)
-     LUT6:I5->O            6   0.205   0.973  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_22_o_MUX_1049_o131 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1052_o)
+     LUT6:I5->O            6   0.205   0.973  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_23_o_MUX_1049_o131 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1052_o)
      LUT4:I1->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_lut<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_lut<1>)
      MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<3>)
      MUXCY:CI->O          25   0.213   1.193  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0007_INV_523_o_cy<4>)
-     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1106_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1156_o_bdd0)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1106_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1156_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<1>)
@@ -1315,7 +1292,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<3>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<4>)
      MUXCY:CI->O          25   0.213   1.193  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0008_INV_522_o_cy<5>)
-     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1157_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1205_o_bdd0)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1157_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1205_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<1>)
@@ -1323,7 +1300,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<3>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<4>)
      MUXCY:CI->O          30   0.213   1.264  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0009_INV_521_o_cy<5>)
-     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1206_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1252_o_bdd0)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1206_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1252_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<1>)
@@ -1331,7 +1308,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<3>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<4>)
      MUXCY:CI->O          31   0.213   1.278  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0010_INV_520_o_cy<5>)
-     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1253_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1297_o_bdd0)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1253_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1297_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<1>)
@@ -1339,7 +1316,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<3> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<3>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<4>)
      MUXCY:CI->O          36   0.213   1.349  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0011_INV_519_o_cy<5>)
-     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1298_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1340_o_bdd0)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1298_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1340_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<1>)
@@ -1348,7 +1325,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<4>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<5>)
      MUXCY:CI->O          37   0.213   1.363  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0012_INV_518_o_cy<6>)
-     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1341_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1381_o_bdd0)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1341_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1381_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<1>)
@@ -1357,7 +1334,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<4>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<5>)
      MUXCY:CI->O          43   0.213   1.449  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0013_INV_517_o_cy<6>)
-     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1382_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1420_o_bdd0)
+     LUT5:I4->O            6   0.205   0.992  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1382_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1420_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<1>)
@@ -1366,7 +1343,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<4> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<4>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<5>)
      MUXCY:CI->O          45   0.213   1.477  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0014_INV_516_o_cy<6>)
-     LUT5:I4->O            5   0.205   0.962  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1421_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1457_o_bdd0)
+     LUT5:I4->O            5   0.205   0.962  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1421_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1457_o_bdd0)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<1>)
@@ -1376,7 +1353,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<5>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<6>)
      MUXCY:CI->O          45   0.213   1.477  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<7> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0015_INV_515_o_cy<7>)
-     LUT5:I4->O            2   0.205   0.864  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1458_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_22_o_MUX_1458_o)
+     LUT5:I4->O            2   0.205   0.864  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1458_o1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_1458_o)
      LUT4:I0->O            0   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_lutdi (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_lutdi)
      MUXCY:DI->O           1   0.145   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0016_INV_514_o_cy<1>)
@@ -1396,10 +1373,10 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<5> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<5>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<6> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<6>)
      MUXCY:CI->O           3   0.213   0.651  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<7> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mcompar_BUS_0017_INV_513_o_cy<7>)
-     LUT1:I0->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0>_rt (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0>_rt)
-     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_cy<1>)
-     XORCY:CI->O           2   0.180   0.617  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_22_o_BUS_0001_add_38_OUT[16:0]_xor<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/GND_22_o_BUS_0001_add_38_OUT[16:0]<2>)
+     LUT1:I0->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_BUS_0001_add_38_OUT[16:0]_cy<0>_rt (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_BUS_0001_add_38_OUT[16:0]_cy<0>_rt)
+     MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_BUS_0001_add_38_OUT[16:0]_cy<0> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_BUS_0001_add_38_OUT[16:0]_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_BUS_0001_add_38_OUT[16:0]_cy<1> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_BUS_0001_add_38_OUT[16:0]_cy<1>)
+     XORCY:CI->O           2   0.180   0.617  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_BUS_0001_add_38_OUT[16:0]_xor<2> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/GND_23_o_BUS_0001_add_38_OUT[16:0]<2>)
      LUT4:I3->O            1   0.205   0.580  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_o101 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4_OUT<2>)
      LUT6:I5->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_67 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_67)
      MUXF7:I1->O           1   0.140   0.808  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_5_f7_6 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_5_f77)
@@ -1411,13 +1388,13 @@ Delay:               50.455ns (Levels of Logic = 127)
                                        (29.0% logic, 71.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL_BASE_inst/CLKOUT0'
   Total number of paths / destination ports: 863 / 335
 -------------------------------------------------------------------------
 Offset:              5.237ns (Levels of Logic = 20)
   Source:            Par_I<0> (PAD)
   Destination:       COMPUTER_mAp/CPU_MAP/DP/PC_uns_15 (FF)
-  Destination Clock: CLK rising
+  Destination Clock: PLL_BASE_inst/CLKOUT0 rising
 
   Data Path: Par_I<0> to COMPUTER_mAp/CPU_MAP/DP/PC_uns_15
                                 Gate     Net
@@ -1449,13 +1426,13 @@ Offset:              5.237ns (Levels of Logic = 20)
                                        (48.7% logic, 51.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL_BASE_inst/CLKOUT0'
   Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
 Offset:              3.597ns (Levels of Logic = 1)
   Source:            COMPUTER_mAp/MEMORY_MAP/port_out_00_15 (FF)
   Destination:       Par_O<15> (PAD)
-  Source Clock:      CLK rising
+  Source Clock:      PLL_BASE_inst/CLKOUT0 rising
 
   Data Path: COMPUTER_mAp/MEMORY_MAP/port_out_00_15 to Par_O<15>
                                 Gate     Net
@@ -1472,61 +1449,61 @@ Offset:              3.597ns (Levels of Logic = 1)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock CLK
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/GND_10_o_GND_10_o_OR_91_o
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+PLL_BASE_inst/CLKOUT0|         |         |    7.989|         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/_n0969<14>
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+PLL_BASE_inst/CLKOUT0|         |         |    3.181|         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/next_state_0_G
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+PLL_BASE_inst/CLKOUT0|         |         |   10.236|         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_26_o_Mux_15_o
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+PLL_BASE_inst/CLKOUT0|         |         |   49.532|         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL_BASE_inst/CLKOUT0
 ------------------------------------------------------------+---------+---------+---------+---------+
                                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------------+---------+---------+---------+---------+
-CLK                                                         |   50.455|         |         |         |
-COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o             |         |    1.179|         |         |
+COMPUTER_mAp/CPU_MAP/CU/GND_10_o_GND_10_o_OR_91_o           |         |    1.179|         |         |
 COMPUTER_mAp/CPU_MAP/CU/_n0969<14>                          |         |    3.631|         |         |
 COMPUTER_mAp/CPU_MAP/CU/next_state_0_G                      |         |    1.179|         |         |
-COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o|         |    6.314|         |         |
+COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_26_o_Mux_15_o|         |    6.314|         |         |
+PLL_BASE_inst/CLKOUT0                                       |   50.455|         |         |         |
 ------------------------------------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/GND_9_o_GND_9_o_OR_91_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    7.989|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/_n0969<14>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |    3.181|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/CU/next_state_0_G
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |   10.236|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_25_o_Mux_15_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |         |         |   49.532|         |
----------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.27 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.07 secs
  
 --> 
 
-Total memory usage is 4938168 kilobytes
+Total memory usage is 4938120 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  356 (   0 filtered)
-Number of infos    :   20 (   0 filtered)
+Number of warnings :  328 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
 
