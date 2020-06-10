@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Vocoder.prj
 
@@ -126,6 +126,9 @@ Parsing architecture <memory_arch> of entity <memory>.
 Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\cpu.vhd" into library work
 Parsing entity <cpu>.
 Parsing architecture <cpu_arch> of entity <cpu>.
+Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\i2s.vhd" into library work
+Parsing entity <i2s>.
+Parsing architecture <description> of entity <i2s>.
 Parsing VHDL file "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\computer.vhd" into library work
 Parsing entity <computer>.
 Parsing architecture <computer_arch> of entity <computer>.
@@ -138,8 +141,8 @@ Parsing architecture <Behavioral> of entity <vocoder>.
 =========================================================================
 
 Elaborating entity <Vocoder> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:89 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 87: <bufg> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:89 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 90: <bufio2fb> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 92: <bufg> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" Line 95: <bufio2fb> remains a black-box since it has no binding entity.
 
 Elaborating entity <computer> (architecture <computer_arch>) from library <work>.
 
@@ -216,27 +219,28 @@ WARNING:HDLCompiler:321 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGL
 WARNING:HDLCompiler:634 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1171: Net <di_pattern[31]> does not have a driver.
 WARNING:HDLCompiler:634 - "N:/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1172: Net <dip_pattern[3]> does not have a driver.
 
+Elaborating entity <i2s> (architecture <description>) with generics from library <work>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <Vocoder>.
     Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd".
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_01> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_02> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_03> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_04> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_05> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_06> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_07> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_08> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_09> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_10> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_11> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_12> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_13> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_14> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 106: Output port <port_out_15> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_02> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_03> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_04> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_05> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_06> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_07> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_08> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_09> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_10> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_11> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_12> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_13> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_14> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\Vocoder.vhd" line 132: Output port <port_out_15> of the instance <COMPUTER_mAp> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Vocoder> synthesized.
@@ -258,7 +262,7 @@ Synthesizing Unit <control_unit>.
     Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\control_unit.vhd".
     Found 7-bit register for signal <current_state>.
     Found 128x15-bit Read Only RAM for signal <_n0969>
-    Found 64x2-bit Read Only RAM for signal <_n1289>
+    Found 64x2-bit Read Only RAM for signal <_n1321>
 WARNING:Xst:737 - Found 1-bit latch for signal <WE>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -425,7 +429,7 @@ WARNING:Xst:653 - Signal <port_out_16> is used but never assigned. This sourcele
     Summary:
 	inferred 256 D-type flip-flop(s).
 	inferred   3 Comparator(s).
-	inferred   3 Multiplexer(s).
+	inferred   4 Multiplexer(s).
 Unit <memory> synthesized.
 
 Synthesizing Unit <rom_32767x16_sync>.
@@ -609,6 +613,23 @@ WARNING:Xst:2935 - Signal 'dip_pattern', unconnected in block 'BRAM_SINGLE_MACRO
 	no macro.
 Unit <BRAM_SINGLE_MACRO> synthesized.
 
+Synthesizing Unit <i2s>.
+    Related source file is "D:\Github\Vocoder\Vocoder-p4-EIT\Projektet\CPU\i2s.vhd".
+        N = 1
+        data_width = 16
+    Found 5-bit register for signal <Ch_counter>.
+    Found 16-bit register for signal <data_in_L_buff>.
+    Found 16-bit register for signal <data_in>.
+    Found 16-bit register for signal <data_out_buff>.
+    Found 16-bit register for signal <data_out_R_buff>.
+    Found 2-bit register for signal <WS_state>.
+    Found 5-bit subtractor for signal <GND_331_o_GND_331_o_sub_4_OUT<4:0>> created at line 70.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  71 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <i2s> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
@@ -619,7 +640,7 @@ Macro Statistics
  64x2-bit single-port Read Only RAM                    : 1
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 74
+# Adders/Subtractors                                   : 75
  16-bit adder                                          : 1
  16-bit subtractor                                     : 4
  17-bit adder                                          : 7
@@ -639,9 +660,12 @@ Macro Statistics
  30-bit adder                                          : 4
  31-bit adder                                          : 4
  32-bit adder                                          : 4
-# Registers                                            : 24
- 16-bit register                                       : 22
+ 5-bit subtractor                                      : 1
+# Registers                                            : 30
+ 16-bit register                                       : 26
+ 2-bit register                                        : 1
  4-bit register                                        : 1
+ 5-bit register                                        : 1
  7-bit register                                        : 1
 # Latches                                              : 25
  1-bit latch                                           : 25
@@ -664,14 +688,15 @@ Macro Statistics
  30-bit comparator greater                             : 2
  31-bit comparator greater                             : 2
  32-bit comparator greater                             : 2
-# Multiplexers                                         : 606
+# Multiplexers                                         : 610
  1-bit 2-to-1 multiplexer                              : 545
  1-bit 9-to-1 multiplexer                              : 17
  16-bit 12-to-1 multiplexer                            : 1
- 16-bit 2-to-1 multiplexer                             : 10
+ 16-bit 2-to-1 multiplexer                             : 13
  16-bit 4-to-1 multiplexer                             : 2
  17-bit 12-to-1 multiplexer                            : 1
  17-bit 2-to-1 multiplexer                             : 2
+ 5-bit 2-to-1 multiplexer                              : 1
  7-bit 2-to-1 multiplexer                              : 28
 # Xors                                                 : 2
  1-bit xor2                                            : 2
@@ -695,7 +720,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0969> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1289> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1321> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -711,6 +736,10 @@ Unit <control_unit> synthesized (advanced).
 Synthesizing (advanced) Unit <data_path>.
 The following registers are absorbed into counter <PC_uns>: 1 register on signal <PC_uns>.
 Unit <data_path> synthesized (advanced).
+
+Synthesizing (advanced) Unit <i2s>.
+The following registers are absorbed into counter <Ch_counter>: 1 register on signal <Ch_counter>.
+Unit <i2s> synthesized (advanced).
 
 Synthesizing (advanced) Unit <rom_32767x16_sync>.
 INFO:Xst:3230 - The RAM description <Mram_ADDR[14]_GND_43_o_wide_mux_1_OUT> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
@@ -741,10 +770,11 @@ Macro Statistics
  16-bit subtractor                                     : 4
  17-bit adder                                          : 3
  17-bit subtractor                                     : 2
-# Counters                                             : 1
+# Counters                                             : 2
  16-bit up counter                                     : 1
-# Registers                                            : 347
- Flip-Flops                                            : 347
+ 5-bit down counter                                    : 1
+# Registers                                            : 413
+ Flip-Flops                                            : 413
 # Comparators                                          : 40
  16-bit comparator greater                             : 2
  16-bit comparator lessequal                           : 6
@@ -764,12 +794,12 @@ Macro Statistics
  30-bit comparator greater                             : 2
  31-bit comparator greater                             : 2
  32-bit comparator greater                             : 2
-# Multiplexers                                         : 620
+# Multiplexers                                         : 623
  1-bit 2-to-1 multiplexer                              : 545
  1-bit 4-to-1 multiplexer                              : 16
  1-bit 9-to-1 multiplexer                              : 17
  16-bit 12-to-1 multiplexer                            : 1
- 16-bit 2-to-1 multiplexer                             : 9
+ 16-bit 2-to-1 multiplexer                             : 12
  16-bit 4-to-1 multiplexer                             : 1
  17-bit 12-to-1 multiplexer                            : 1
  17-bit 2-to-1 multiplexer                             : 2
@@ -821,54 +851,8 @@ Optimizing unit <data_path> ...
 Optimizing unit <alu> ...
 
 Optimizing unit <control_unit> ...
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_0> of sequential type is unconnected in block <Vocoder>.
+
+Optimizing unit <i2s> ...
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_15> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_14> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_13> of sequential type is unconnected in block <Vocoder>.
@@ -885,38 +869,38 @@ WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_3> of sequential ty
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_2> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_1> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_14_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_13_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_15_0> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_15> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_14> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_13> of sequential type is unconnected in block <Vocoder>.
@@ -933,38 +917,38 @@ WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_3> of sequential ty
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_2> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_1> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_11_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_10_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_12_0> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_15> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_14> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_13> of sequential type is unconnected in block <Vocoder>.
@@ -981,38 +965,38 @@ WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_3> of sequential ty
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_2> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_1> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_08_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_07_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_09_0> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_15> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_14> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_13> of sequential type is unconnected in block <Vocoder>.
@@ -1029,22 +1013,54 @@ WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_3> of sequential ty
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_2> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_1> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_05_0> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_15> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_14> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_13> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_12> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_11> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_10> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_9> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_8> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_7> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_6> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_5> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_4> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_3> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_2> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_1> of sequential type is unconnected in block <Vocoder>.
-WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_01_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_04_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_06_0> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_15> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_14> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_13> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_12> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_11> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_10> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_9> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_8> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_7> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_6> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_5> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_4> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_3> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_2> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_1> of sequential type is unconnected in block <Vocoder>.
+WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_03_0> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_15> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_14> of sequential type is unconnected in block <Vocoder>.
 WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_13> of sequential type is unconnected in block <Vocoder>.
@@ -1064,7 +1080,7 @@ WARNING:Xst:2677 - Node <COMPUTER_mAp/MEMORY_MAP/port_out_02_0> of sequential ty
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Vocoder, actual ratio is 28.
+Found area constraint ratio of 100 (+ 5) on block Vocoder, actual ratio is 29.
 FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_0 has been replicated 3 time(s)
 FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_1 has been replicated 3 time(s)
 FlipFlop COMPUTER_mAp/CPU_MAP/DP/A_out_10 has been replicated 3 time(s)
@@ -1104,8 +1120,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 197
- Flip-Flops                                            : 197
+# Registers                                            : 284
+ Flip-Flops                                            : 284
 
 =========================================================================
 
@@ -1128,32 +1144,35 @@ Top Level Output File Name         : Vocoder.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2549
+# BELS                             : 2578
 #      GND                         : 1
-#      INV                         : 91
+#      INV                         : 93
 #      LUT1                        : 2
-#      LUT2                        : 107
+#      LUT2                        : 112
 #      LUT3                        : 209
-#      LUT4                        : 361
-#      LUT5                        : 289
-#      LUT6                        : 583
+#      LUT4                        : 379
+#      LUT5                        : 306
+#      LUT6                        : 570
 #      MUXCY                       : 513
 #      MUXF7                       : 18
 #      VCC                         : 1
 #      XORCY                       : 374
-# FlipFlops/Latches                : 222
+# FlipFlops/Latches                : 309
+#      FD                          : 2
 #      FDC                         : 7
-#      FDCE                        : 174
-#      FDE                         : 16
+#      FDCE                        : 190
+#      FDE                         : 37
+#      FDE_1                       : 48
 #      LD                          : 20
 #      LDC                         : 5
 # RAMS                             : 1
 #      RAMB16BWER                  : 1
-# Clock Buffers                    : 1
+# Clock Buffers                    : 2
 #      BUFG                        : 1
-# IO Buffers                       : 35
-#      IBUF                        : 18
-#      OBUF                        : 17
+#      BUFGP                       : 1
+# IO Buffers                       : 38
+#      IBUF                        : 20
+#      OBUF                        : 18
 # DSPs                             : 1
 #      DSP48A1                     : 1
 # Others                           : 2
@@ -1167,25 +1186,25 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             222  out of  11440     1%  
- Number of Slice LUTs:                 1642  out of   5720    28%  
-    Number used as Logic:              1642  out of   5720    28%  
+ Number of Slice Registers:             309  out of  11440     2%  
+ Number of Slice LUTs:                 1671  out of   5720    29%  
+    Number used as Logic:              1671  out of   5720    29%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1765
-   Number with an unused Flip Flop:    1543  out of   1765    87%  
-   Number with an unused LUT:           123  out of   1765     6%  
-   Number of fully used LUT-FF pairs:    99  out of   1765     5%  
-   Number of unique control sets:        13
+ Number of LUT Flip Flop pairs used:   1841
+   Number with an unused Flip Flop:    1532  out of   1841    83%  
+   Number with an unused LUT:           170  out of   1841     9%  
+   Number of fully used LUT-FF pairs:   139  out of   1841     7%  
+   Number of unique control sets:        20
 
 IO Utilization: 
- Number of IOs:                          35
- Number of bonded IOBs:                  35  out of    102    34%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    102    38%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
     Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
  Number of DSP48A1s:                      1  out of     16     6%  
  Number of PLL_ADVs:                      1  out of      2    50%  
 
@@ -1210,10 +1229,11 @@ Clock Information:
 -----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                 | Clock buffer(FF name)                                                                  | Load  |
 -----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
-PLL_BASE_inst/CLKOUT0                                                                                                        | BUFG                                                                                   | 198   |
+PLL_BASE_inst/CLKOUT0                                                                                                        | BUFG                                                                                   | 214   |
 COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_26_o_Mux_15_o(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_26_o_Mux_15_o1:O)| NONE(*)(COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/Sum_sign_0)                                    | 17    |
 COMPUTER_mAp/CPU_MAP/CU/_n0969<14>(COMPUTER_mAp/CPU_MAP/CU_Mram__n0969141:O)                                                 | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/WE)                                                    | 1     |
 COMPUTER_mAp/CPU_MAP/CU/GND_10_o_GND_10_o_OR_91_o(COMPUTER_mAp/CPU_MAP/CU/GND_10_o_GND_10_o_OR_91_o:O)                       | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/next_state_2)                                          | 5     |
+SCK                                                                                                                          | BUFGP                                                                                  | 71    |
 COMPUTER_mAp/CPU_MAP/CU/next_state_0_G(COMPUTER_mAp/CPU_MAP/CU/next_state_0_G:O)                                             | NONE(*)(COMPUTER_mAp/CPU_MAP/CU/next_state_0)                                          | 2     |
 N1                                                                                                                           | NONE(COMPUTER_mAp/MEMORY_MAP/RAM/BRAM_SINGLE_MACRO_inst/ramb_st.ramb18_sin_st.ram18_st)| 1     |
 -----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+-------+
@@ -1231,7 +1251,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 50.455ns (Maximum Frequency: 19.819MHz)
-   Minimum input arrival time before clock: 5.237ns
+   Minimum input arrival time before clock: 6.895ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -1242,7 +1262,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'PLL_BASE_inst/CLKOUT0'
   Clock period: 50.455ns (frequency: 19.819MHz)
-  Total number of paths / destination ports: 372229730363816970000000 / 407
+  Total number of paths / destination ports: 372229730363817370000000 / 439
 -------------------------------------------------------------------------
 Delay:               50.455ns (Levels of Logic = 127)
   Source:            COMPUTER_mAp/CPU_MAP/DP/B_out_5 (FF)
@@ -1262,8 +1282,8 @@ Delay:               50.455ns (Levels of Logic = 127)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<8> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<8>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<9> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_cy<9>)
      XORCY:CI->O           3   0.180   0.755  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Msub_b[15]_unary_minus_3_OUT_xor<10> (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/b[15]_unary_minus_3_OUT<10>)
-     LUT6:I4->O            1   0.203   0.580  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0_SW0 (N335)
-     LUT6:I5->O            1   0.205   0.684  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0 (N258)
+     LUT6:I4->O            1   0.203   0.580  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0_SW0 (N339)
+     LUT6:I5->O            1   0.205   0.684  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/BUS_0002_INV_528_o21_SW0 (N262)
      LUT6:I4->O            7   0.203   0.878  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_23_o_MUX_821_o11 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_821_o)
      LUT6:I4->O            3   0.203   0.879  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_b[15]_add_11_OUT_Madd_Madd_lut<14>1 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Madd_GND_23_o_b[15]_add_11_OUT_Madd_Madd_lut<14>)
      LUT4:I1->O            4   0.205   0.931  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_a[15]_GND_23_o_MUX_939_o111 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/a[15]_GND_23_o_MUX_940_o)
@@ -1380,7 +1400,7 @@ Delay:               50.455ns (Levels of Logic = 127)
      LUT4:I3->O            1   0.205   0.580  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4/Mmux_o101 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/A[15]_B[15]_div_4_OUT<2>)
      LUT6:I5->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_67 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_67)
      MUXF7:I1->O           1   0.140   0.808  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_5_f7_6 (COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel<3>_5_f77)
-     LUT6:I3->O            1   0.205   0.808  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/NZVC<2><15>9_SW0_SW0 (N367)
+     LUT6:I3->O            1   0.205   0.808  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/NZVC<2><15>9_SW0_SW0 (N371)
      LUT6:I3->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/NZVC<2><15>11 (COMPUTER_mAp/CPU_MAP/DP/NZVC_sig<2>)
      FDCE:D                    0.102          COMPUTER_mAp/CPU_MAP/DP/CCR_Result_2
     ----------------------------------------
@@ -1388,10 +1408,32 @@ Delay:               50.455ns (Levels of Logic = 127)
                                        (29.0% logic, 71.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL_BASE_inst/CLKOUT0'
-  Total number of paths / destination ports: 863 / 335
+Timing constraint: Default period analysis for Clock 'SCK'
+  Clock period: 6.545ns (frequency: 152.786MHz)
+  Total number of paths / destination ports: 235 / 106
 -------------------------------------------------------------------------
-Offset:              5.237ns (Levels of Logic = 20)
+Delay:               3.273ns (Levels of Logic = 1)
+  Source:            i2s_map/WS_state_0 (FF)
+  Destination:       i2s_map/data_out_R_buff_15 (FF)
+  Source Clock:      SCK rising
+  Destination Clock: SCK falling
+
+  Data Path: i2s_map/WS_state_0 to i2s_map/data_out_R_buff_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              25   0.447   1.297  i2s_map/WS_state_0 (i2s_map/WS_state_0)
+     LUT2:I0->O           16   0.203   1.004  i2s_map/WS_state[1]_PWR_49_o_equal_2_o<1>1 (i2s_map/WS_state[1]_PWR_49_o_equal_2_o)
+     FDE_1:CE                  0.322          i2s_map/data_out_R_buff_0
+    ----------------------------------------
+    Total                      3.273ns (0.972ns logic, 2.301ns route)
+                                       (29.7% logic, 70.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL_BASE_inst/CLKOUT0'
+  Total number of paths / destination ports: 879 / 351
+-------------------------------------------------------------------------
+Offset:              6.895ns (Levels of Logic = 22)
   Source:            Par_I<0> (PAD)
   Destination:       COMPUTER_mAp/CPU_MAP/DP/PC_uns_15 (FF)
   Destination Clock: PLL_BASE_inst/CLKOUT0 rising
@@ -1400,10 +1442,12 @@ Offset:              5.237ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.222   0.898  Par_I_0_IBUF (Par_I_0_IBUF)
-     LUT6:I2->O            2   0.203   0.961  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS2110_SW1 (N51)
-     LUT5:I0->O            1   0.203   0.827  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS219_SW1 (N288)
-     LUT6:I2->O            1   0.203   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_lut<0> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_lut<0>)
+     IBUF:I->O             1   1.222   0.684  Par_I_0_IBUF (Par_I_0_IBUF)
+     LUT4:I2->O            1   0.203   0.808  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS217 (COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS21)
+     LUT6:I3->O            3   0.205   0.651  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS218 (COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS211)
+     LUT4:I3->O            2   0.205   0.981  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS2110_SW0 (N54)
+     LUT6:I0->O            1   0.203   0.808  COMPUTER_mAp/CPU_MAP/DP/Mmux_BUS219_SW0 (N291)
+     LUT6:I3->O            1   0.205   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_lut<0> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_lut<0>)
      MUXCY:S->O            1   0.172   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<0> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<1> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<2> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_cy<2>)
@@ -1422,8 +1466,27 @@ Offset:              5.237ns (Levels of Logic = 20)
      XORCY:CI->O           1   0.180   0.000  COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns_xor<15> (COMPUTER_mAp/CPU_MAP/DP/Mcount_PC_uns15)
      FDCE:D                    0.102          COMPUTER_mAp/CPU_MAP/DP/PC_uns_15
     ----------------------------------------
-    Total                      5.237ns (2.551ns logic, 2.686ns route)
-                                       (48.7% logic, 51.3% route)
+    Total                      6.895ns (2.963ns logic, 3.932ns route)
+                                       (43.0% logic, 57.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SCK'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            SD_in (PAD)
+  Destination:       i2s_map/data_in_L_buff_0 (FF)
+  Destination Clock: SCK rising
+
+  Data Path: SD_in to i2s_map/data_in_L_buff_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  SD_in_IBUF (SD_in_IBUF)
+     FDE:D                     0.102          i2s_map/data_in_L_buff_0
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL_BASE_inst/CLKOUT0'
@@ -1440,6 +1503,25 @@ Offset:              3.597ns (Levels of Logic = 1)
     ----------------------------------------  ------------
      FDCE:C->Q             1   0.447   0.579  COMPUTER_mAp/MEMORY_MAP/port_out_00_15 (COMPUTER_mAp/MEMORY_MAP/port_out_00_15)
      OBUF:I->O                 2.571          Par_O_15_OBUF (Par_O<15>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SCK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            i2s_map/data_out_buff_15 (FF)
+  Destination:       SD_out (PAD)
+  Source Clock:      SCK falling
+
+  Data Path: i2s_map/data_out_buff_15 to SD_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            1   0.447   0.579  i2s_map/data_out_buff_15 (i2s_map/data_out_buff_15)
+     OBUF:I->O                 2.571          SD_out_OBUF (SD_out)
     ----------------------------------------
     Total                      3.597ns (3.018ns logic, 0.579ns route)
                                        (83.9% logic, 16.1% route)
@@ -1487,23 +1569,33 @@ Clock to Setup on destination clock PLL_BASE_inst/CLKOUT0
 Source Clock                                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------------+---------+---------+---------+---------+
 COMPUTER_mAp/CPU_MAP/CU/GND_10_o_GND_10_o_OR_91_o           |         |    1.179|         |         |
-COMPUTER_mAp/CPU_MAP/CU/_n0969<14>                          |         |    3.631|         |         |
+COMPUTER_mAp/CPU_MAP/CU/_n0969<14>                          |         |    3.660|         |         |
 COMPUTER_mAp/CPU_MAP/CU/next_state_0_G                      |         |    1.179|         |         |
 COMPUTER_mAp/CPU_MAP/DP/ALU_MAP/ALU_Sel[3]_GND_26_o_Mux_15_o|         |    6.314|         |         |
 PLL_BASE_inst/CLKOUT0                                       |   50.455|         |         |         |
+SCK                                                         |         |    6.018|         |         |
 ------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SCK
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+PLL_BASE_inst/CLKOUT0|         |         |    1.599|         |
+SCK                  |    1.741|    2.629|    3.290|         |
+---------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 20.07 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.03 secs
  
 --> 
 
-Total memory usage is 4938120 kilobytes
+Total memory usage is 4938268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  328 (   0 filtered)
-Number of infos    :   21 (   0 filtered)
+Number of warnings :  312 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
 

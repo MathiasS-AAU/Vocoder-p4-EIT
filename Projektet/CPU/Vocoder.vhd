@@ -37,7 +37,12 @@ entity Vocoder is
 	 RST_ext          	: in   std_logic; -- Reset
 	 ADDA_CLK : out std_logic; --DAC/ADC system clock
 	 Par_I : in  STD_LOGIC_VECTOR (15 downto 0);
-    Par_O : out  STD_LOGIC_VECTOR (15 downto 0)
+    Par_O : out  STD_LOGIC_VECTOR (15 downto 0);
+	 --i2s bus
+	 SCK  : IN STD_LOGIC; -- continuous serial clock
+    WS : IN STD_LOGIC; -- word select (channel select) 0 = Left, 1 = Right
+    SD_in : IN STD_LOGIC; -- Serial data in
+	 SD_out : OUT STD_LOGIC -- Serial data out
 	 );
 end Vocoder;
 
@@ -91,6 +96,27 @@ component BUFIO2FB
 port(I: in STD_LOGIC; O: out STD_LOGIC );
 end component;
 
+component i2s IS 
+	generic ( 
+		constant N: natural := 1;  -- Number of shifted or rotated bits
+		data_width          :  INTEGER := 16
+   );
+PORT(
+	--Intern I/O
+	data_in   : OUT STD_LOGIC_VECTOR(15 downto 0); -- input 16 bit signed værdi
+	data_out   : IN STD_LOGIC_VECTOR(15 downto 0); -- output 16 bit signed værdi. dual mono output. Værdi bør indsættes når WS stiger.
+	--i2s bus
+   SCK  : IN STD_LOGIC; -- continuous serial clock
+   WS : IN STD_LOGIC; -- word select (channel select) 0 = Left, 1 = Right
+   SD_in : IN STD_LOGIC; -- Serial data in
+	SD_out : OUT STD_LOGIC -- Serial data out
+);
+end component;
+
+			--i2s
+			signal data_in : STD_LOGIC_VECTOR(15 downto 0);
+			signal data_out : STD_LOGIC_VECTOR(15 downto 0);
+
 			
 			--PLL stuff
 			signal CLK : std_logic;
@@ -105,7 +131,7 @@ Feedback_Clock: BUFIO2FB port map (I => CLK_FB_out, O => CLK_FB_in); -- Feedback
 
 COMPUTER_mAp : computer	port map (CLK => CLK, RST => RST_ext,
 				  port_in_00 => Par_I,
-				  port_in_01 => x"0000",
+				  port_in_01 => data_in,
 				  port_in_02 => x"0000",
 				  port_in_03 => x"0000",
 				  port_in_04 => x"0000",
@@ -121,7 +147,7 @@ COMPUTER_mAp : computer	port map (CLK => CLK, RST => RST_ext,
 				  port_in_14 => x"0000",
 				  port_in_15 => x"0000",
 				  port_out_00 => Par_O,
-				  port_out_01 => open,
+				  port_out_01 => data_out,
 				  port_out_02 => open,
 				  port_out_03 => open,
 				  port_out_04 => open,
@@ -137,6 +163,15 @@ COMPUTER_mAp : computer	port map (CLK => CLK, RST => RST_ext,
 				  port_out_14 => open,
 				  port_out_15 => open);
 
+i2s_map : i2s port map(
+	--Intern I/O
+	data_in  => data_in,
+	data_out   => data_out,
+	--i2s bus
+   SCK  => SCK,
+   WS  => WS,
+   SD_in => SD_in,
+	SD_out => SD_out );
 
 --PLL
 
@@ -178,6 +213,8 @@ PLL_BASE_inst : PLL_BASE
       CLKIN => CLK_IN,       -- 1-bit input: Clock input
       RST => RST_ext            -- 1-bit input: Reset input
    );
+
+
 
 end Behavioral;
 
